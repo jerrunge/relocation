@@ -36,18 +36,17 @@ a:hover{border-bottom-color:var(--slate)}
 .hero .wordmark{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:12px;letter-spacing:.02em;color:var(--silver);margin-bottom:18px}
 .hero h1{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:clamp(38px,9vw,66px);line-height:.95;letter-spacing:-.03em;color:var(--paper)}
 .wm-course{max-width:420px;margin-top:18px}
-.hero .dek{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(18px,4vw,22px);color:var(--slate-l);margin-top:24px;max-width:26em;line-height:1.45}
+.hero .dek{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(18px,4vw,22px);color:var(--slate-l);margin-top:24px;max-width:27em;line-height:1.45}
 .hero .databar{border-top:1px solid rgba(215,212,198,.16);border-bottom:1px solid rgba(215,212,198,.16)}
 .hero .databar .dl{color:var(--slate-l)}.hero .databar b{color:var(--paper);font-weight:500}
-.hero .databar b.acc{color:var(--sound)}
 .databar{display:flex;flex-wrap:wrap;gap:9px 24px;padding:15px 0;margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
 .databar .df{display:flex;gap:7px}
 
 .pitch{margin-top:34px}
 .pitch p{font-size:18px;color:var(--body);max-width:36em;margin-bottom:16px;line-height:1.7}
 .pitch p b{color:var(--land);font-weight:600}
-.pullband{background:linear-gradient(155deg,#242A32,#1D2229);color:var(--paper);margin:54px 0;padding:48px 0}
-.pullband .pull{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(21px,4.6vw,28px);line-height:1.4;color:var(--paper);padding-left:22px;border-left:3px solid var(--red);max-width:24em;margin:0}
+.pullband{background:linear-gradient(155deg,#242A32,#1D2229);color:var(--paper);margin:54px 0;padding:46px 0}
+.pullband .pull{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(20px,4.4vw,27px);line-height:1.42;color:var(--paper);padding-left:22px;border-left:3px solid var(--red);max-width:26em;margin:0}
 .pullband .pull b{color:var(--sound);font-weight:500;font-style:normal}
 
 .lab{--acc:var(--slate);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#9A958A;margin:60px 0 8px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
@@ -58,38 +57,32 @@ a:hover{border-bottom-color:var(--slate)}
 .sec-p{font-size:16px;color:var(--body);max-width:38em;margin:6px 0 4px}
 .sec-p .w{font-style:italic;color:var(--slate)}
 
-/* comparison table */
 .tablewrap{margin-top:22px;border:1px solid var(--hairline);border-radius:8px;overflow:hidden;box-shadow:0 14px 40px rgba(38,37,31,.06)}
 .tscroll{overflow-x:auto}
-table.ctable{width:100%;border-collapse:collapse;min-width:640px;background:var(--card)}
+table.ctable{width:100%;border-collapse:collapse;min-width:660px;background:var(--card)}
 .ctable thead th{background:#242A32;color:var(--sound);font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;text-align:left;padding:12px 14px;font-weight:500;white-space:nowrap}
-.ctable thead th.berk{color:var(--paper);background:#2B3540}
+.ctable thead th.rent{color:var(--paper);background:#2B3540}
 .ctable tbody td{padding:14px;border-top:1px solid var(--hairline);font-size:13.5px;color:var(--body);vertical-align:top}
 .ctable tbody tr:nth-child(even){background:rgba(255,255,255,.35)}
 .ctable .town{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:var(--land);letter-spacing:-.01em;line-height:1.2}
 .ctable .town small{display:block;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:9px;color:#9A958A;margin-top:3px;letter-spacing:.03em}
 .ctable .num{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;font-size:12.5px;color:var(--land);white-space:nowrap}
-.ctable td.berk{background:var(--slate-wash)}
+.ctable td.rent{background:var(--slate-wash)}
 .ctable .bmode{font-family:'IBM Plex Mono',monospace;font-size:9px;color:#9A958A;letter-spacing:.03em;display:block;margin-top:3px}
-.ctable .bt{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px}
-.bt.go{color:var(--kelp)}.bt.ok{color:var(--slate)}.bt.no{color:var(--rust)}
-.pill{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.05em;padding:2px 6px;border-radius:3px;white-space:nowrap}
+.ctable .bt{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;color:var(--land)}
+.pill{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.05em;padding:2px 6px;border-radius:3px;white-space:nowrap;margin-top:5px}
+.pill.ok{color:var(--kelp);background:var(--kelp-wash)}
+.pill.tight{color:var(--rust);background:var(--rust-wash)}
 .pill.lo{color:var(--kelp);background:var(--kelp-wash)}
 .pill.mid{color:var(--slate);background:var(--slate-wash)}
 .pill.hi{color:var(--rust);background:var(--rust-wash)}
 
-/* town cards */
 .cards{margin-top:24px;display:grid;gap:16px}
 .card{background:var(--card);border:1px solid var(--hairline);border-top:3px solid var(--slate);border-radius:8px;padding:20px 22px 22px;transition:transform .15s,box-shadow .15s}
 .card:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(38,37,31,.10)}
-.card.best{border-top-color:var(--kelp)}
-.card.value{border-top-color:var(--kelp)}
-.card.charm{border-top-color:var(--slate)}
-.card.life{border-top-color:var(--kelp)}
-.card.out{border-top-color:var(--rust)}
 .card .ct{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
 .card h3{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:21px;letter-spacing:-.015em;color:var(--land);line-height:1.12}
-.card .rank{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;color:var(--slate);white-space:nowrap}
+.card .id{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;color:#9A958A;white-space:nowrap}
 .card .metaline{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#9A958A;margin:8px 0 2px;letter-spacing:.02em;font-variant-numeric:tabular-nums}
 .card .metaline b{color:var(--slate);font-weight:500}
 .card p{font-size:15px;color:var(--body);line-height:1.6;margin-top:10px;max-width:48em}
@@ -100,23 +93,19 @@ table.ctable{width:100%;border-collapse:collapse;min-width:640px;background:var(
 .tag.watch{color:var(--rust);background:var(--rust-wash)}
 .tag.slate{color:var(--slate);background:var(--slate-wash)}
 
-/* commute block */
 .commute{margin-top:16px;background:var(--paper);border:1px solid var(--hairline);border-radius:6px;padding:14px 16px}
-.commute .ch{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin-bottom:8px;display:flex;justify-content:space-between;align-items:baseline}
-.commute .ch .v{font-weight:500}
-.commute .ch .v.go{color:var(--kelp)}.commute .ch .v.ok{color:var(--slate)}.commute .ch .v.no{color:var(--rust)}
+.commute .ch{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#9A958A;margin-bottom:9px}
 .cbar{display:flex;align-items:center;gap:10px}
 .cbar .track{flex:1;height:9px;background:var(--hairline);border-radius:5px;overflow:hidden}
-.cbar .fill{height:100%;border-radius:5px}
-.cbar .fill.go{background:var(--kelp)}.cbar .fill.ok{background:var(--slate)}
-.cbar .fill.no{background:repeating-linear-gradient(90deg,var(--rust) 0 8px,transparent 8px 14px)}
+.cbar .fill{height:100%;border-radius:5px;background:var(--slate-l)}
+.cbar .fill.none{background:repeating-linear-gradient(90deg,var(--silver) 0 7px,transparent 7px 13px)}
 .cbar .t{font-family:'IBM Plex Mono',monospace;font-size:11px;font-variant-numeric:tabular-nums;color:var(--land);white-space:nowrap;min-width:74px;text-align:right}
 .commute .detail{font-size:14px;color:var(--body);line-height:1.55;margin-top:10px}
 .commute .detail b{color:var(--land)}
 
 .closeband{background:linear-gradient(158deg,#1D2229,#242A32 70%,#2B3540);color:var(--paper);margin-top:70px;padding:46px 0 40px}
 .closeband .course{max-width:300px;margin-bottom:26px}
-.closeband .love{font-family:'Newsreader',serif;font-style:italic;font-size:19px;color:var(--paper);margin:0 0 22px;line-height:1.5;max-width:32em}
+.closeband .love{font-family:'Newsreader',serif;font-style:italic;font-size:19px;color:var(--paper);margin:0 0 22px;line-height:1.5;max-width:34em}
 .closeband .love b{color:var(--sound);font-style:normal;font-weight:500}
 .foot{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.05em;color:var(--slate-l);line-height:2;font-variant-numeric:tabular-nums}
 .foot b{color:var(--sound);font-weight:500}
@@ -127,16 +116,16 @@ table.ctable{width:100%;border-collapse:collapse;min-width:640px;background:var(
   <div class="hero">
     <div class="wrap">
       <a class="backlink" href="index.html">← The Relocation Briefcase</a>
-      <div class="k">California Candidates · The Berkeley-Commute Read</div>
+      <div class="k">California Candidates · Read Side by Side</div>
       <div class="wordmark">JEREMY RUNGE</div>
       <h1 class="disp">The California<br>Shortlist</h1>
       <div class="course wm-course" role="presentation"></div>
-      <p class="dek">Five towns that clear the gate — read side by side, and measured by one new axis: can you reach Berkeley without a car?</p>
+      <p class="dek">Five towns that clear the entitlement gate — read on what differs: the rent, the regional center, wildfire, and the Berkeley transit commute.</p>
       <div class="databar" aria-label="shortlist data">
         <span class="df"><span class="dl">HOME</span><b>PACIFICA, CA</b></span>
-        <span class="df"><span class="dl">NEW AXIS</span><b class="acc">BERKELEY · TRANSIT</b></span>
-        <span class="df"><span class="dl">CANDIDATES</span><b>5</b></span>
         <span class="df"><span class="dl">GATE</span><b>CA ENTITLEMENT ✓</b></span>
+        <span class="df"><span class="dl">HOUSING</span><b>3BD/2BA · &lt;$3K/MO</b></span>
+        <span class="df"><span class="dl">CANDIDATES</span><b>5</b></span>
         <span class="df"><span class="dl">UPDATED</span><b>2026-07-16</b></span>
       </div>
     </div>
@@ -145,20 +134,20 @@ table.ctable{width:100%;border-collapse:collapse;min-width:640px;background:var(
   <div class="wrap">
     <section class="pitch" aria-label="framing">
       <p>Every town here clears the one non-negotiable: California's Lanterman entitlement covers all of them, so <b>Maddy's services are guaranteed statewide</b> — the difference is only which regional center holds her file, and a move between them is a transfer, not a restart.</p>
-      <p>So the gate isn't the story on this page. The new axis is: <b>getting to Berkeley without a car.</b> That single question reshuffles the whole board — because the towns that commute well to Berkeley sit on the Capitol Corridor rail line or a BART-bus, and the foothills don't. The finalist you already love is the outlier here.</p>
+      <p>So this page reads them on what actually differs. Housing is measured the way it matters to you — <b>a 3bd/2ba rental under $3,000/month</b>, and whether that band really exists there — not sale prices. Wildfire and the Berkeley transit commute are listed alongside, as reference, for you to weight however you want.</p>
     </section>
   </div>
 
   <div class="pullband">
     <div class="wrap">
-      <p class="pull">Grass Valley wins the life. On rails to Berkeley, it doesn't run at all. <b>The two things you want may live in different towns.</b></p>
+      <p class="pull">One gate, cleared by all five. Everything below is just the honest read on the things that separate them — <b>starting with whether you can actually rent a 3/2 there under three grand.</b></p>
     </div>
   </div>
 
   <div class="wrap">
-    <div class="lab slate"><b>Matrix</b> &nbsp; Five towns, one axis</div>
+    <div class="lab slate"><b>Matrix</b> &nbsp; Five towns, side by side</div>
     <section aria-label="comparison table">
-      <p class="sec-p">Ordered by transit time to Berkeley — fastest first. <span class="w">Commute order is not fit order: Davis and Grass Valley lead on life, Martinez leads on the train.</span></p>
+      <p class="sec-p">The gate's already cleared by all of them. <span class="w">Housing is the criterion that has teeth here; the Berkeley commute is listed for reference, not as a ranking.</span></p>
       <div class="tablewrap">
         <div class="tscroll">
           <table class="ctable">
@@ -166,136 +155,134 @@ table.ctable{width:100%;border-collapse:collapse;min-width:640px;background:var(
               <tr>
                 <th>Town</th>
                 <th>Serves (Regional Center)</th>
-                <th>~Median home</th>
+                <th class="rent">3bd/2ba rent · under $3K?</th>
                 <th>Wildfire</th>
-                <th class="berk">Berkeley · by transit</th>
+                <th>Berkeley · by transit</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><div class="town">Martinez<small>CONTRA COSTA</small></div></td>
-                <td>Regional Center of the East Bay</td>
-                <td class="num">~$780K</td>
-                <td><span class="pill mid">LOW–MOD</span></td>
-                <td class="berk"><span class="bt go">~35 min</span><span class="bmode">Capitol Corridor · direct · ~14/day</span></td>
-              </tr>
-              <tr>
-                <td><div class="town">Fairfield / Suisun City<small>SOLANO</small></div></td>
-                <td>North Bay Regional Center</td>
-                <td class="num">~$525–695K</td>
-                <td><span class="pill mid">LOW–MOD</span></td>
-                <td class="berk"><span class="bt go">~55 min</span><span class="bmode">Capitol Corridor · direct · ~14/day</span></td>
-              </tr>
-              <tr>
-                <td><div class="town">Benicia<small>SOLANO</small></div></td>
-                <td>North Bay Regional Center</td>
-                <td class="num">~$790–800K</td>
-                <td><span class="pill lo">LOW</span></td>
-                <td class="berk"><span class="bt ok">~1 hr</span><span class="bmode">SolTrans bus → BART · bus ~every 2 hrs</span></td>
-              </tr>
-              <tr>
-                <td><div class="town">Davis<small>YOLO</small></div></td>
-                <td>Alta California <b>— same as A1</b></td>
-                <td class="num">~$780–830K</td>
-                <td><span class="pill lo">LOW</span></td>
-                <td class="berk"><span class="bt ok">~1 h 20</span><span class="bmode">Capitol Corridor · direct · ~14/day</span></td>
-              </tr>
-              <tr>
                 <td><div class="town">Grass Valley / Nevada City<small>NEVADA · A1</small></div></td>
                 <td>Alta California Regional Center</td>
-                <td class="num">~$505–597K*</td>
+                <td class="rent"><span class="num">~$2,200–2,700</span><br><span class="pill ok">UNDER $3K · WIDELY</span></td>
                 <td><span class="pill hi">ELEVATED</span></td>
-                <td class="berk"><span class="bt no">~4 hr+</span><span class="bmode">bus → Auburn → rail · not viable</span></td>
+                <td><span class="bt">~4 hr+</span><span class="bmode">bus → Auburn → rail · car ~2.5 hr</span></td>
+              </tr>
+              <tr>
+                <td><div class="town">Martinez<small>CONTRA COSTA · A2</small></div></td>
+                <td>Regional Center of the East Bay</td>
+                <td class="rent"><span class="num">~$3,000–3,700</span><br><span class="pill tight">TIGHT · LIMITED</span></td>
+                <td><span class="pill mid">LOW–MOD</span></td>
+                <td><span class="bt">~35 min</span><span class="bmode">Capitol Corridor · direct · ~14/day</span></td>
+              </tr>
+              <tr>
+                <td><div class="town">Fairfield / Suisun City<small>SOLANO · A3</small></div></td>
+                <td>North Bay Regional Center</td>
+                <td class="rent"><span class="num">~$2,400–3,000</span><br><span class="pill ok">UNDER $3K · AVAILABLE</span></td>
+                <td><span class="pill mid">LOW–MOD</span></td>
+                <td><span class="bt">~55 min</span><span class="bmode">Capitol Corridor · direct · ~14/day</span></td>
+              </tr>
+              <tr>
+                <td><div class="town">Benicia<small>SOLANO · A4</small></div></td>
+                <td>North Bay Regional Center</td>
+                <td class="rent"><span class="num">~$3,000–3,700</span><br><span class="pill tight">TIGHT · AT THE LIMIT</span></td>
+                <td><span class="pill lo">LOW</span></td>
+                <td><span class="bt">~1 hr</span><span class="bmode">SolTrans bus → BART · bus ~every 2 hrs</span></td>
+              </tr>
+              <tr>
+                <td><div class="town">Davis<small>YOLO · A5</small></div></td>
+                <td>Alta California <b>— same as A1</b></td>
+                <td class="rent"><span class="num">~$3,000–3,250</span><br><span class="pill tight">TIGHT · STUDENT-DRIVEN</span></td>
+                <td><span class="pill lo">LOW</span></td>
+                <td><span class="bt">~1 h 20</span><span class="bmode">Capitol Corridor · direct · ~14/day</span></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-      <p class="sec-p" style="margin-top:12px;font-size:13px;color:#9A958A;font-family:'IBM Plex Mono',monospace">* Grass Valley median; Nevada City runs ~$796K. Medians: Redfin / Movoto / Zillow, mid-2026.</p>
+      <p class="sec-p" style="margin-top:12px;font-size:13px;color:#9A958A;font-family:'IBM Plex Mono',monospace">Rent = typical 3bd/2ba listings, mid-2026 (Zillow · Zumper · RentCafe · Apartments · Rent.com). "Tight" = the band exists but most 3/2 listings run at or above $3K.</p>
     </section>
 
     <div class="lab kelp"><b>Read</b> &nbsp; Each town, up close</div>
     <section aria-label="town cards">
-
       <div class="cards">
 
-        <div class="card best" id="martinez">
-          <div class="ct"><h3>Martinez</h3><span class="rank">▸ BEST COMMUTE</span></div>
-          <div class="metaline"><b>Contra Costa</b> · Regional Center of the East Bay · ~$780K · wildfire low–moderate</div>
-          <p>The train pick. Capitol Corridor drops you in Berkeley in about <b>35 minutes</b>, roughly fourteen times a day — the closest thing to a one-seat rail commute on the whole list. Historic waterfront downtown, a marina, John Muir's home, and an enormous East Bay Regional Park network at the doorstep (Briones, Carquinez Strait) for Cooper. The honest gaps: no true co-op, so you'd lean on Bay Area grocers ~20 minutes out, and the water here is Delta and bay — for trout you're driving to the Sierra.</p>
-          <div class="tags"><span class="tag go">Trains 35 min</span><span class="tag go">Regional-park trails</span><span class="tag slate">No co-op</span><span class="tag slate">Bay, not trout</span></div>
+        <div class="card" id="gvnc" style="border-top-color:var(--kelp)">
+          <div class="ct"><h3>Grass Valley / Nevada City</h3><span class="id">A1 · SCOUTED</span></div>
+          <div class="metaline"><b>Nevada</b> · Alta California Regional Center · 3/2 ~$2,200–2,700 · wildfire elevated</div>
+          <p>The scouted finalist — river, trails, gold-rush downtowns, BriarPatch co-op, and 3/2 rentals sitting <b>comfortably under $3K</b>. The two honest marks against it: real wildfire exposure, and no transit path to Berkeley. <a href="grass-valley-nevada-city.html">See the full scouted page →</a></p>
+          <div class="tags"><span class="tag go">Rent under $3K</span><span class="tag go">BriarPatch co-op</span><span class="tag go">Yuba / trails</span><span class="tag watch">Wildfire</span></div>
           <div class="commute">
-            <div class="ch"><span>Commute to Berkeley · transit</span><span class="v go">Real rail commute</span></div>
-            <div class="cbar"><div class="track"><div class="fill go" style="width:39%"></div></div><span class="t">~35 min</span></div>
-            <div class="detail"><b>Capitol Corridor</b>, Martinez → Berkeley station, direct, ~14 trains/day. Walk or short bus to the platform, one train, done.</div>
+            <div class="ch">Commute to Berkeley · transit</div>
+            <div class="cbar"><div class="track"><div class="fill none" style="width:100%"></div></div><span class="t">~4 hr+</span></div>
+            <div class="detail">No rail in the county. Route 5 bus to Auburn (~50 min, weekdays only) then Capitol Corridor (~2 h 40, ~2 Auburn trains/day). In practice, <b>~2.5 hr by car</b> — a driving relationship, not a transit one.</div>
           </div>
         </div>
 
-        <div class="card value" id="fairfield">
-          <div class="ct"><h3>Fairfield / Suisun City</h3><span class="rank">▸ BEST VALUE</span></div>
-          <div class="metaline"><b>Solano</b> · North Bay Regional Center · Suisun ~$525K / Fairfield ~$610–695K · wildfire low–moderate</div>
-          <p>The runway play — the only new town in your Grass Valley price range, with <b>Suisun City around $525K</b> and a direct Capitol Corridor stop that reaches Berkeley in about <b>55 minutes</b>. Suisun City's waterfront district is walkable and genuinely charming; Rockville Hills Regional Park covers dog trails. The trade: it's the weakest of the five on the clean-eating co-op and the walk-everywhere vibe — Fairfield proper is car-oriented, and the LGBTQ presence is suburban rather than a scene.</p>
-          <div class="tags"><span class="tag go">Most affordable</span><span class="tag go">Direct train 55 min</span><span class="tag slate">Thin co-op</span><span class="tag slate">Car-oriented</span></div>
+        <div class="card" id="martinez">
+          <div class="ct"><h3>Martinez</h3><span class="id">A2 · RESEARCHED</span></div>
+          <div class="metaline"><b>Contra Costa</b> · Regional Center of the East Bay · 3/2 ~$3,000–3,700 · wildfire low–moderate</div>
+          <p>Historic waterfront downtown, a marina, John Muir's home, and an enormous East Bay Regional Park network at the doorstep (Briones, Carquinez Strait) for Cooper. The honest gaps: <b>3/2 rentals mostly land at or above $3K</b>, so your band is tight here; there's no true co-op (Bay Area grocers are ~20 min out); and the water is Delta and bay — for trout you're driving to the Sierra.</p>
+          <div class="tags"><span class="tag watch">Rent tight (~$3K+)</span><span class="tag go">Regional-park trails</span><span class="tag slate">No co-op</span><span class="tag slate">Bay, not trout</span></div>
           <div class="commute">
-            <div class="ch"><span>Commute to Berkeley · transit</span><span class="v go">Affordable + direct rail</span></div>
-            <div class="cbar"><div class="track"><div class="fill go" style="width:61%"></div></div><span class="t">~55 min</span></div>
-            <div class="detail"><b>Capitol Corridor</b> from the Suisun-Fairfield station → Berkeley, direct, ~14 trains/day. The value pick: rail access at foothill prices.</div>
+            <div class="ch">Commute to Berkeley · transit</div>
+            <div class="cbar"><div class="track"><div class="fill" style="width:39%"></div></div><span class="t">~35 min</span></div>
+            <div class="detail"><b>Capitol Corridor</b>, Martinez → Berkeley, direct, ~14 trains/day. Walk or short bus to the platform, one train.</div>
           </div>
         </div>
 
-        <div class="card charm" id="benicia">
-          <div class="ct"><h3>Benicia</h3><span class="rank">▸ MOST CHARM</span></div>
-          <div class="metaline"><b>Solano</b> · North Bay Regional Center · ~$790–800K · wildfire low</div>
-          <p>The charm pick — a compact former state capital on the Carquinez Strait with one of the most <b>walkable Main Streets in the North Bay</b>, an arts district in the old Arsenal, waterfront everywhere, and Benicia State Recreation Area shoreline for the dog. Low wildfire risk. The catch is the commute's <b>frequency</b>, not its length: the express bus to BART runs only about every two hours, so life bends around the timetable.</p>
-          <div class="tags"><span class="tag go">Very walkable</span><span class="tag go">Low fire</span><span class="tag slate">Bus every ~2 hrs</span><span class="tag slate">No co-op</span></div>
+        <div class="card" id="fairfield">
+          <div class="ct"><h3>Fairfield / Suisun City</h3><span class="id">A3 · RESEARCHED</span></div>
+          <div class="metaline"><b>Solano</b> · North Bay Regional Center · 3/2 ~$2,400–3,000 · wildfire low–moderate</div>
+          <p>The one new town where the rent band actually holds — <b>3/2 houses under $3K are available</b>, with Suisun City the softer end. Suisun City's waterfront district is walkable and genuinely charming; Rockville Hills Regional Park covers dog trails. The trade: it's the weakest of the five on the clean-eating co-op and the walk-everywhere vibe — Fairfield proper is car-oriented, and the LGBTQ presence is suburban rather than a scene.</p>
+          <div class="tags"><span class="tag go">Rent under $3K</span><span class="tag go">Direct rail</span><span class="tag slate">Thin co-op</span><span class="tag slate">Car-oriented</span></div>
           <div class="commute">
-            <div class="ch"><span>Commute to Berkeley · transit</span><span class="v ok">Doable, timetable-bound</span></div>
-            <div class="cbar"><div class="track"><div class="fill ok" style="width:67%"></div></div><span class="t">~1 hr</span></div>
-            <div class="detail"><b>SolTrans express bus</b> (Benicia → Walnut Creek BART) then <b>BART</b> into Berkeley — about an hour all in, but the bus runs ~every 2 hours, so you plan around it.</div>
+            <div class="ch">Commute to Berkeley · transit</div>
+            <div class="cbar"><div class="track"><div class="fill" style="width:61%"></div></div><span class="t">~55 min</span></div>
+            <div class="detail"><b>Capitol Corridor</b> from the Suisun-Fairfield station → Berkeley, direct, ~14 trains/day.</div>
           </div>
         </div>
 
-        <div class="card life" id="davis">
-          <div class="ct"><h3>Davis</h3><span class="rank">▸ BEST LIFE + RAIL</span></div>
-          <div class="metaline"><b>Yolo</b> · Alta California — same RC as A1 · ~$780–830K · wildfire low, flood moderate</div>
-          <p>The best lifestyle match of the four new towns, and the smoothest for Maddy: Davis sits in the <b>same Alta California Regional Center as Grass Valley</b>, so her file wouldn't even change hands. It has a true <b>food co-op</b>, <b>Putah Creek's tailwater trout</b> minutes away (your standout water), and it's one of the most bike- and dog-friendly, LGBTQ-affirming towns in the country. The cost of all that: ~$800K and tight inventory, plus hot Central Valley summers and winter tule fog.</p>
-          <div class="tags"><span class="tag go">Food co-op</span><span class="tag go">Putah Creek trout</span><span class="tag go">Same RC as A1</span><span class="tag slate">Pricey</span><span class="tag slate">Hot summers</span></div>
+        <div class="card" id="benicia">
+          <div class="ct"><h3>Benicia</h3><span class="id">A4 · RESEARCHED</span></div>
+          <div class="metaline"><b>Solano</b> · North Bay Regional Center · 3/2 ~$3,000–3,700 · wildfire low</div>
+          <p>A compact former state capital on the Carquinez Strait with one of the most <b>walkable Main Streets in the North Bay</b>, an arts district in the old Arsenal, waterfront everywhere, and Benicia State Recreation Area shoreline for the dog. Low wildfire. The catch for you: <b>3/2 rentals sit right at $3K and up</b>, so the band is tight — and the express bus to BART runs only about every two hours.</p>
+          <div class="tags"><span class="tag watch">Rent tight (~$3K+)</span><span class="tag go">Very walkable</span><span class="tag go">Low fire</span><span class="tag slate">Bus every ~2 hrs</span></div>
           <div class="commute">
-            <div class="ch"><span>Commute to Berkeley · transit</span><span class="v ok">Real, just longer</span></div>
-            <div class="cbar"><div class="track"><div class="fill ok" style="width:89%"></div></div><span class="t">~1 h 20</span></div>
-            <div class="detail"><b>Capitol Corridor</b>, Davis → Berkeley, direct, ~14 trains/day. Bike to the station, ride in — a real rail commute, just a longer sit than Martinez.</div>
+            <div class="ch">Commute to Berkeley · transit</div>
+            <div class="cbar"><div class="track"><div class="fill" style="width:67%"></div></div><span class="t">~1 hr</span></div>
+            <div class="detail"><b>SolTrans express bus</b> (Benicia → Walnut Creek BART) then <b>BART</b> into Berkeley — about an hour all in, but the bus runs ~every 2 hours.</div>
           </div>
         </div>
 
-        <div class="card out" id="gvnc">
-          <div class="ct"><h3>Grass Valley / Nevada City</h3><span class="rank">▸ A1 · THE OUTLIER</span></div>
-          <div class="metaline"><b>Nevada</b> · Alta California Regional Center · ~$505–597K · wildfire elevated</div>
-          <p>Still the best whole-life fit — the river, the trails, the gold-rush downtowns, BriarPatch co-op, the one you actually scouted. But on this axis it's the outlier, full stop. There's <b>no rail in western Nevada County</b>; the nearest Capitol Corridor platform is in Auburn, ~45 minutes away by car. <a href="grass-valley-nevada-city.html">See the full scouted page →</a></p>
-          <div class="tags"><span class="tag go">Best life fit</span><span class="tag go">BriarPatch co-op</span><span class="tag watch">No transit to Berkeley</span><span class="tag watch">Wildfire watch</span></div>
+        <div class="card" id="davis">
+          <div class="ct"><h3>Davis</h3><span class="id">A5 · RESEARCHED</span></div>
+          <div class="metaline"><b>Yolo</b> · Alta California — same RC as A1 · 3/2 ~$3,000–3,250 · wildfire low, flood moderate</div>
+          <p>The strongest everyday fit of the four new towns, and smoothest for Maddy: Davis sits in the <b>same Alta California Regional Center as Grass Valley</b>, so her file wouldn't even change hands. A true <b>food co-op</b>, <b>Putah Creek's tailwater trout</b> minutes away, and one of the most bike- and dog-friendly, LGBTQ-affirming towns anywhere. The catch: student demand keeps <b>3/2 rents around $3,000–3,250</b>, so your band is tight, and summers run hot.</p>
+          <div class="tags"><span class="tag watch">Rent tight (~$3K)</span><span class="tag go">Food co-op</span><span class="tag go">Putah Creek trout</span><span class="tag go">Same RC as A1</span></div>
           <div class="commute">
-            <div class="ch"><span>Commute to Berkeley · transit</span><span class="v no">Not viable — car only</span></div>
-            <div class="cbar"><div class="track"><div class="fill no" style="width:100%"></div></div><span class="t">~4 hr+</span></div>
-            <div class="detail">Nevada County <b>Route 5 bus</b> to Auburn (~50 min, weekdays only), then <b>Capitol Corridor</b> to Berkeley (~2 h 40) — and only a couple of Auburn trains run each day. In practice, Berkeley is a <b>driving</b> relationship (~2.5 hr each way), not a transit one.</div>
+            <div class="ch">Commute to Berkeley · transit</div>
+            <div class="cbar"><div class="track"><div class="fill" style="width:89%"></div></div><span class="t">~1 h 20</span></div>
+            <div class="detail"><b>Capitol Corridor</b>, Davis → Berkeley, direct, ~14 trains/day. Bike to the station, ride in.</div>
           </div>
         </div>
 
       </div>
     </section>
 
-    <div class="lab rust"><b>Call</b> &nbsp; What the axis is really asking</div>
-    <section aria-label="synthesis">
-      <p class="sec-p">If reaching Berkeley without a car is a <b>hard</b> requirement, the board tilts to the Capitol Corridor: <b>Martinez</b> for the shortest ride, <b>Fairfield/Suisun</b> for rail at foothill prices, <b>Davis</b> for the best blend of that commute and the life you actually want. <b>Benicia</b> works if you can live with a two-hour bus headway. <b>Grass Valley</b> keeps winning the life and loses this axis outright.</p>
-      <p class="sec-p">The real question underneath it: <span class="w">who needs Berkeley, and how often?</span> A once-a-week trip and a five-day commute point at completely different towns — and at whether the foothill finalist survives at all.</p>
+    <div class="lab rust"><b>How to read this</b></div>
+    <section aria-label="notes">
+      <p class="sec-p">On the corrected housing test, only <b>Grass Valley/Nevada City</b> and <b>Fairfield/Suisun</b> keep 3/2 rentals reliably under $3,000. <b>Martinez, Benicia, and Davis</b> can be done in that band, but you'd be hunting the bottom of their market. Wildfire and the Berkeley commute sit alongside as reference — weight them however fits the plan, rather than letting either drive the ranking.</p>
     </section>
   </div>
 
   <div class="closeband">
     <div class="wrap">
       <div class="course" role="presentation"></div>
-      <div class="love">Five towns, one gate cleared by all of them, one new axis that splits them clean down the middle. <b>Now we know what Berkeley costs — in minutes, and in trade-offs.</b><br><br>Love.</div>
+      <div class="love">Five towns, one gate cleared by all of them, and now the numbers that actually matter — rent first. <b>The list stays honest; the weighting stays yours.</b><br><br>Love.</div>
       <div class="foot">
         <span><b>SYSTEM</b> Due West (locked 2026-07-03) · content register 60/40</span><br>
-        <span><b>SOURCES</b> CA DDS regional-center listings · Capitol Corridor / Amtrak schedules · SolTrans · Nevada County Connects · Redfin / Movoto / Zillow (mid-2026)</span><br>
+        <span><b>SOURCES</b> CA DDS regional-center listings · Zillow / Zumper / RentCafe / Apartments / Rent.com (3bd/2ba, mid-2026) · Capitol Corridor · SolTrans · Nevada County Connects</span><br>
         <span><b>UPDATED</b> 2026-07-16 · <b>STATUS</b> Researched · scouts pending</span>
       </div>
     </div>
