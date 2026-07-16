@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Relocation Briefcase — Due West</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,900;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#EFEEE7; --card:#F6F5EE; --dusk:#242A32; --dusk-2:#1D2229; --land:#26251F; --body:#43423A;
+  --silver:#B7B1A4; --hairline:#D8D4C6; --slate:#46606F; --slate-l:#7D93A1;
+  --sound:#AFC6D0; --red:#D14625; --rust:#834112; --kelp:#4A5A3E;
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--land);font-family:'Newsreader',serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px}
+a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--hairline)}
+a:hover{border-bottom-color:var(--slate)}
+:focus-visible{outline:2px solid var(--slate);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.disp{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;letter-spacing:-.02em}
+.water{font-family:'Newsreader',serif;font-style:italic;color:var(--slate)}
+.course{position:relative;height:2px;background:repeating-linear-gradient(90deg,var(--red) 0 14px,transparent 14px 22px)}
+.course::after{content:'270°';position:absolute;right:0;top:-19px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--red);letter-spacing:.08em}
+
+/* dusk cover */
+.hero{background:linear-gradient(158deg,#1D2229 0%,#242A32 55%,#2B3540 100%);color:var(--paper);position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(175,198,208,.10),transparent 70%)}
+.hero .wrap{padding:58px 22px 40px;position:relative;z-index:1}
+.hero .k{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:var(--sound);margin-bottom:22px;text-transform:uppercase}
+.hero .wordmark{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:12px;letter-spacing:.02em;color:var(--silver);margin-bottom:20px}
+.hero h1{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:clamp(38px,9vw,60px);line-height:.97;letter-spacing:-.025em;color:var(--paper)}
+.wm-course{max-width:360px;margin-top:16px}
+.hero .subtitle{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(17px,3.6vw,20px);color:var(--slate-l);margin-top:24px;max-width:34em;line-height:1.5}
+.hero .databar{border-top:1px solid rgba(215,212,198,.16);border-bottom:1px solid rgba(215,212,198,.16)}
+.hero .databar .dl{color:var(--slate-l)}.hero .databar b{color:var(--paper);font-weight:500}
+.databar{display:flex;flex-wrap:wrap;gap:8px 26px;padding:14px 0;margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.databar .df{display:flex;gap:7px}
+
+.lede{font-size:18px;color:var(--body);margin-top:34px;max-width:38em}
+section p{font-size:16.5px;color:var(--body);max-width:38em;margin-bottom:14px}
+section p b{color:var(--land);font-weight:600}
+
+.lab{--acc:var(--slate);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#9A958A;margin:60px 0 6px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.lab::before{content:'';display:inline-block;width:24px;height:3px;border-radius:2px;background:var(--acc)}
+.lab b{color:var(--acc);font-weight:600}
+.lab::after{content:'';flex:1;height:1px;background:var(--hairline)}
+.lab.kelp{--acc:var(--kelp)}.lab.rust{--acc:var(--rust)}.lab.slate{--acc:var(--slate)}
+
+.frame{margin-top:22px}
+.frow{display:grid;grid-template-columns:26px 150px 1fr;gap:12px;padding:15px 0;border-top:1px solid var(--hairline);align-items:start}
+.frow:last-child{border-bottom:1px solid var(--hairline)}
+.fn{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--rust);padding-top:5px;font-variant-numeric:tabular-nums}
+.fk{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:var(--land);letter-spacing:-.005em;padding-top:2px;line-height:1.25}
+.fv{font-size:14.5px;color:var(--body);line-height:1.55}
+.fv .why{display:block;font-family:'Newsreader',serif;font-style:italic;color:var(--slate);font-size:14px;margin-top:3px}
+@media(max-width:560px){.frow{grid-template-columns:22px 1fr;gap:8px 10px}.fk{grid-column:2;padding-top:0}.fv{grid-column:2}.fn{grid-row:1;grid-column:1}}
+
+.sleeve{margin-top:22px;background:var(--card);border:1px solid var(--hairline);border-radius:6px;padding:22px 24px 24px;box-shadow:0 14px 40px rgba(38,37,31,.06)}
+.side{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;margin:0 0 6px;display:flex;align-items:center;gap:8px}
+.side::before{content:'';width:14px;height:3px;border-radius:2px;background:currentColor}
+.side.ca{color:var(--kelp)}.side.or{color:var(--slate)}
+.trk{display:grid;grid-template-columns:24px 1fr auto;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px dotted var(--silver)}
+.trk:last-child{border-bottom:none}
+a.trk{border-bottom:1px dotted var(--silver)}
+a.trk:hover .tt{color:var(--slate)}
+.trk .tn{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9A958A;font-variant-numeric:tabular-nums}
+.trk .tt{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:16.5px;color:var(--land);letter-spacing:-.01em;line-height:1.25}
+.trk .tt small{display:block;font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:13.5px;color:var(--slate);letter-spacing:0;margin-top:2px}
+.trk .ts{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em;white-space:nowrap;text-align:right;padding-top:3px;padding:3px 7px;border-radius:4px}
+.trk .ts.go{color:var(--kelp);background:rgba(74,90,62,.10)}
+.trk .ts.dim{color:#9A958A}
+
+/* dusk close */
+.closeband{background:linear-gradient(158deg,#1D2229,#242A32 70%,#2B3540);color:var(--paper);margin-top:64px;padding:44px 0 40px}
+.closeband .course{max-width:300px;margin-bottom:24px}
+.closeband .love{font-family:'Newsreader',serif;font-style:italic;font-size:19px;color:var(--paper);margin:0 0 20px;max-width:32em;line-height:1.5}
+.closeband .love b{color:var(--sound);font-style:normal;font-weight:500}
+.foot{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.05em;color:var(--slate-l);line-height:2;font-variant-numeric:tabular-nums}
+.foot b{color:var(--sound);font-weight:500}
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="wrap">
+      <div class="k">Relocation Scout · JR-OS Operations</div>
+      <div class="wordmark">JEREMY RUNGE</div>
+      <h1 class="disp">The Relocation<br>Briefcase</h1>
+      <div class="course wm-course" role="presentation"></div>
+      <p class="subtitle">One rubric, carried to every candidate. What to think about, what to walk, what to verify before a single box gets taped.</p>
+      <div class="databar" aria-label="operating data">
+        <span class="df"><span class="dl">HOME</span><b>PACIFICA, CA</b></span>
+        <span class="df"><span class="dl">COURSE</span><b>270° W</b></span>
+        <span class="df"><span class="dl">VIABLE STATES</span><b>CA · OR</b></span>
+        <span class="df"><span class="dl">SCOUTED</span><b>1 OF 2</b></span>
+        <span class="df"><span class="dl">UPDATED</span><b>2026-07-16</b></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section aria-labelledby="brief-intro">
+      <p class="lede" id="brief-intro">The move isn't one decision — it's the same fifteen decisions asked of every place. This briefcase holds the fifteen so no candidate gets graded on charm instead of fit. <span class="water">A town can be beautiful on a Saturday and wrong for a life.</span></p>
+      <p>The non-negotiable up top: <b>Maddy's support services.</b> Only two states clear the bar — <b>California</b> (Lanterman Act entitlement) and <b>Oregon</b> (K-Plan, no waitlist). Every destination in this book lives in one of those two. Everything else is a comparison, not a gate.</p>
+    </section>
+
+    <div class="lab rust"><b>01</b> &nbsp;·&nbsp; The Fifteen — what each place is graded on</div>
+    <section aria-label="the briefcase framework">
+      <div class="frame">
+        <div class="frow"><div class="fn">01</div><div class="fk">Regional Center &amp; DDS</div><div class="fv">Which regional center serves the county; office distance; whether eligibility transfers or restarts.<span class="why">Decisive. Everything else is negotiable; this isn't.</span></div></div>
+        <div class="frow"><div class="fn">02</div><div class="fk">Healthcare access</div><div class="fv">Nearest hospital, specialists, in-network coverage, ER drive time.<span class="why">A household of five with real history can't be an hour from care.</span></div></div>
+        <div class="frow"><div class="fn">03</div><div class="fk">Housing cost &amp; market</div><div class="fv">Median price, inventory, buyer vs. seller conditions, forever-home stock.<span class="why">The runway math only works if the number is honest.</span></div></div>
+        <div class="frow"><div class="fn">04</div><div class="fk">LGBTQ+ community</div><div class="fv">Visible community, safety, Pride presence — neighbors, not novelties.<span class="why">Not just legal — lived. It has to feel like ours.</span></div></div>
+        <div class="frow"><div class="fn">05</div><div class="fk">Clean eating &amp; grocery</div><div class="fv">Co-op or grocer carrying organic, wild-caught, pasture-raised, non-GMO.<span class="why">The standard doesn't relax for zip code.</span></div></div>
+        <div class="frow"><div class="fn">06</div><div class="fk">Strength training</div><div class="fv">A serious gym — real iron, 24-hr access, walkable if possible.<span class="why">Daily infrastructure, not a nice-to-have.</span></div></div>
+        <div class="frow"><div class="fn">07</div><div class="fk">Fly fishing &amp; water</div><div class="fv">Tailwater / river / access points within reach; season length.<span class="why">The thing that makes a place feel like home, not just housing.</span></div></div>
+        <div class="frow"><div class="fn">08</div><div class="fk">Dog &amp; trails</div><div class="fv">Off-leash options, dog-friendly walkable trails for Cooper.<span class="why">70 lbs of Bernedoodle votes too.</span></div></div>
+        <div class="frow"><div class="fn">09</div><div class="fk">Climate &amp; environment</div><div class="fv">Heat load, air quality, seasonal feel, elevation.<span class="why">The weather you actually live in, not the brochure day.</span></div></div>
+        <div class="frow"><div class="fn">10</div><div class="fk">Disaster &amp; insurance</div><div class="fv">Wildfire exposure, flood, insurability, premium reality.<span class="why">In California this is a cost line, not a footnote.</span></div></div>
+        <div class="frow"><div class="fn">11</div><div class="fk">Connectivity &amp; travel</div><div class="fv">Broadband for remote work; nearest airport; drive to a real city.<span class="why">The income is remote — the pipe and the runway have to be there.</span></div></div>
+        <div class="frow"><div class="fn">12</div><div class="fk">Taxes &amp; cost of living</div><div class="fv">State tax posture, overall CoL vs. national, entitlement-law tradeoffs.<span class="why">CA costs more; the entitlement is what we're buying.</span></div></div>
+        <div class="frow"><div class="fn">13</div><div class="fk">Support proximity</div><div class="fv">Distance to Karston (SF), existing friends, chosen family, backup.<span class="why">Connection is foundational — don't move away from the net.</span></div></div>
+        <div class="frow"><div class="fn">14</div><div class="fk">Neighborhoods</div><div class="fv">The specific streets — forever-home lane vs. charm-you-visit zone.<span class="why">You don't move to a town, you move to a block.</span></div></div>
+        <div class="frow"><div class="fn">15</div><div class="fk">Vibe &amp; walkability</div><div class="fv">Downtown feel, third places, whether daily life happens on foot.<span class="why">The intangible that decides if you stay after year one.</span></div></div>
+      </div>
+    </section>
+
+    <div class="lab slate"><b>02</b> &nbsp;·&nbsp; The Candidates</div>
+    <section aria-label="destinations index">
+      <div class="sleeve">
+        <div class="side ca">CALIFORNIA · LANTERMAN ENTITLEMENT</div>
+        <a class="trk" href="grass-valley-nevada-city.html">
+          <div class="tn">A1</div>
+          <div class="tt">Grass Valley / Nevada City<small>Nevada County · Sierra foothills</small></div>
+          <div class="ts go">SCOUTED · OPEN ▸</div>
+        </a>
+        <div class="trk"><div class="tn">A2</div><div class="tt">— open slot —<small>next CA candidate</small></div><div class="ts dim">TBD</div></div>
+        <div class="side or" style="margin-top:18px">OREGON · K-PLAN ENTITLEMENT</div>
+        <div class="trk"><div class="tn">B1</div><div class="tt">Rogue Valley — Ashland / Medford<small>Jackson County · no-waitlist state</small></div><div class="ts dim">RESEARCHED · SCOUT PENDING</div></div>
+        <div class="trk"><div class="tn">B2</div><div class="tt">— open slot —<small>next OR candidate</small></div><div class="ts dim">TBD</div></div>
+      </div>
+      <p class="water" style="margin-top:16px;font-size:15px">Eliminated earlier: Montana (~7-yr wait), Utah (5.4-yr wait), North Carolina. Off the board on services alone.</p>
+    </section>
+  </div>
+
+  <div class="closeband">
+    <div class="wrap">
+      <div class="course" role="presentation"></div>
+      <div class="love">Same fifteen questions, asked honestly, of every place we consider. <b>The one that answers them best is home.</b><br><br>Love.</div>
+      <div class="foot">
+        <span><b>SYSTEM</b> Due West (locked 2026-07-03)</span><br>
+        <span><b>SOURCES</b> DDS · regional-center research · scout notes 2026-07-16</span><br>
+        <span><b>STATUS</b> Draft hub · not yet deployed</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grass Valley &amp; Nevada City — The Relocation Briefcase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,900;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#EFEEE7; --card:#F6F5EE; --dusk:#242A32; --dusk-2:#1D2229;
+  --land:#26251F; --body:#43423A; --silver:#B7B1A4; --hairline:#D8D4C6;
+  --slate:#46606F; --slate-l:#7D93A1; --sound:#AFC6D0;
+  --red:#D14625; --rust:#834112; --kelp:#4A5A3E;
+  --kelp-wash:rgba(74,90,62,.10); --rust-wash:rgba(131,65,18,.10); --slate-wash:rgba(70,96,111,.10);
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--land);font-family:'Newsreader',serif;line-height:1.72;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--hairline);transition:border-color .15s}
+a:hover{border-bottom-color:var(--slate)}
+:focus-visible{outline:2px solid var(--slate);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.disp{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;letter-spacing:-.02em}
+.course{position:relative;height:2px;background:repeating-linear-gradient(90deg,var(--red) 0 14px,transparent 14px 22px)}
+.course::after{content:'270°';position:absolute;right:0;top:-19px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--red);letter-spacing:.08em}
+
+/* ===== DUSK COVER (full-bleed) ===== */
+.hero{background:linear-gradient(158deg,#1D2229 0%,#242A32 55%,#2B3540 100%);color:var(--paper);position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(175,198,208,.10),transparent 70%);pointer-events:none}
+.hero .wrap{padding:34px 22px 36px;position:relative;z-index:1}
+.backlink{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;color:var(--sound);text-transform:uppercase;border:none;display:inline-block;margin-bottom:26px}
+.backlink:hover{color:var(--paper)}
+.hero .k{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:var(--sound);margin-bottom:18px;text-transform:uppercase}
+.hero .wordmark{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:12px;letter-spacing:.02em;color:var(--silver);margin-bottom:18px}
+.hero h1{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:clamp(40px,10vw,72px);line-height:.94;letter-spacing:-.03em;color:var(--paper)}
+.wm-course{max-width:420px;margin-top:18px}
+.hero .dek{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(18px,4vw,23px);color:var(--slate-l);margin-top:24px;max-width:22em;line-height:1.45}
+.hero .databar{border-top:1px solid rgba(215,212,198,.16);border-bottom:1px solid rgba(215,212,198,.16)}
+.hero .databar .dl{color:var(--slate-l)}
+.hero .databar b{color:var(--paper);font-weight:500}
+.hero .databar b.go{color:var(--sound)}
+.databar{display:flex;flex-wrap:wrap;gap:9px 26px;padding:15px 0;margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.databar .df{display:flex;gap:7px}
+
+/* ===== body prose ===== */
+.pitch{margin-top:34px}
+.pitch p{font-size:18.5px;color:var(--body);max-width:34em;margin-bottom:18px;line-height:1.7}
+.pitch p b{color:var(--land);font-weight:600}
+
+/* dusk pull band */
+.pullband{background:linear-gradient(155deg,#242A32,#1D2229);color:var(--paper);margin:56px 0;padding:52px 0}
+.pullband .pull{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(22px,5vw,30px);line-height:1.4;color:var(--paper);padding-left:22px;border-left:3px solid var(--red);max-width:22em;margin:0}
+.pullband .pull b{color:var(--sound);font-weight:500;font-style:normal}
+
+/* section labels — color-coded */
+.lab{--acc:var(--slate);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#9A958A;margin:66px 0 8px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.lab::before{content:'';display:inline-block;width:24px;height:3px;border-radius:2px;background:var(--acc)}
+.lab b{color:var(--acc);font-weight:600}
+.lab::after{content:'';flex:1;height:1px;background:var(--hairline)}
+.lab.kelp{--acc:var(--kelp)}.lab.rust{--acc:var(--rust)}.lab.slate{--acc:var(--slate)}
+.sec-p{font-size:16.5px;color:var(--body);max-width:37em;margin-bottom:8px;margin-top:6px}
+.sec-p .w{font-style:italic;color:var(--slate)}
+
+/* MAP */
+.mapwrap{margin-top:24px;background:linear-gradient(180deg,#F3F2EA,#EFEEE7);border:1px solid var(--hairline);border-radius:8px;padding:12px;box-shadow:0 16px 44px rgba(38,37,31,.08)}
+.mapwrap svg{width:100%;height:auto;display:block;border-radius:4px}
+.mapcap{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9A958A;letter-spacing:.03em;margin-top:10px;padding:0 4px;line-height:1.6}
+.mapcap b{color:var(--slate);font-weight:500}
+
+/* scorecard */
+.decisive{background:linear-gradient(180deg,rgba(74,90,62,.11),rgba(74,90,62,.04));border:1px solid rgba(74,90,62,.22);border-left:3px solid var(--kelp);border-radius:5px;padding:20px 22px;margin:26px 0}
+.decisive .dh{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;color:var(--kelp);text-transform:uppercase;margin-bottom:9px}
+.decisive p{font-size:15.5px;margin-bottom:0;color:var(--body);max-width:40em}
+.decisive p b{color:var(--land)}
+.decisive .w{font-style:italic;color:var(--kelp)}
+.score{margin-top:6px}
+.srow{display:grid;grid-template-columns:148px 1fr 92px;gap:14px;padding:15px 0;border-bottom:1px solid var(--hairline);align-items:start}
+.srow .sk{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:14px;color:var(--land);letter-spacing:-.005em;line-height:1.25}
+.srow .sk small{display:block;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:9px;letter-spacing:.06em;color:#9A958A;margin-top:4px}
+.srow .sv{font-size:14px;color:var(--body);line-height:1.55}
+.srow .sv .data{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--land);font-variant-numeric:tabular-nums}
+.flag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.05em;text-align:center;white-space:nowrap;display:inline-block;padding:3px 7px;border-radius:4px}
+.flag.go{color:var(--kelp);background:var(--kelp-wash)}
+.flag.watch{color:var(--rust);background:var(--rust-wash)}
+.flag.key{color:var(--slate);background:var(--slate-wash)}
+.flagcell{text-align:right;padding-top:1px}
+@media(max-width:600px){
+  .srow{grid-template-columns:1fr 84px;gap:5px 12px}
+  .srow .sk{grid-column:1}.srow .sv{grid-column:1 / -1}.flagcell{grid-row:1;grid-column:2}
+}
+
+/* cards */
+.cards{margin-top:24px;display:grid;gap:14px}
+.card{background:var(--card);border:1px solid var(--hairline);border-top:3px solid var(--silver);border-radius:7px;padding:19px 22px 20px;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(38,37,31,.10)}
+.card.trail{border-top-color:var(--kelp)}
+.card.eat{border-top-color:var(--rust)}
+.card.cult{border-top-color:var(--slate)}
+.card .ct{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.card h3{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.01em;color:var(--land);line-height:1.15}
+.card .meta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--slate);font-variant-numeric:tabular-nums;letter-spacing:.02em;white-space:nowrap}
+.card .star{color:var(--rust)}
+.card .role{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin:9px 0 6px;color:#9A958A}
+.card.trail .role{color:var(--kelp)}
+.card.eat .role{color:var(--rust)}
+.card.cult .role{color:var(--slate)}
+.card p{font-size:15px;color:var(--body);line-height:1.6;margin-top:4px;max-width:44em}
+.card .sub{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9A958A;margin-top:10px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.card .go-link{display:inline-block;margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--slate);border-bottom:1px solid var(--hairline)}
+.card .go-link:hover{border-bottom-color:var(--slate);color:var(--land)}
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;padding:3px 7px;margin:8px 6px 0 0;border:1px solid transparent}
+.card.trail .tag{color:var(--kelp);background:var(--kelp-wash)}
+.card.cult .tag{color:var(--slate);background:var(--slate-wash)}
+.tag.slate{color:var(--slate)!important;background:var(--slate-wash)!important}
+.tag.watch{color:var(--rust)!important;background:var(--rust-wash)!important}
+
+/* ===== dusk close (full-bleed) ===== */
+.closeband{background:linear-gradient(158deg,#1D2229,#242A32 70%,#2B3540);color:var(--paper);margin-top:72px;padding:46px 0 40px}
+.closeband .course{max-width:300px;margin-bottom:26px}
+.closeband .love{font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:var(--paper);margin:0 0 22px;line-height:1.5;max-width:30em}
+.closeband .love b{color:var(--sound);font-style:normal;font-weight:500}
+.foot{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.05em;color:var(--slate-l);line-height:2;font-variant-numeric:tabular-nums}
+.foot b{color:var(--sound);font-weight:500}
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="wrap">
+      <a class="backlink" href="index.html">← The Relocation Briefcase</a>
+      <div class="k">Candidate A1 · California · Lanterman Entitlement</div>
+      <div class="wordmark">JEREMY RUNGE</div>
+      <h1 class="disp">Grass Valley<br>&amp; Nevada City</h1>
+      <div class="course wm-course" role="presentation"></div>
+      <p class="dek">Twin gold-rush towns in the Sierra foothills — and a real shortlist for the next chapter.</p>
+      <div class="databar" aria-label="destination data">
+        <span class="df"><span class="dl">POS</span><b>39.2°N 121.06°W</b></span>
+        <span class="df"><span class="dl">ELEV</span><b>2,411 FT</b></span>
+        <span class="df"><span class="dl">FROM PACIFICA</span><b>~2.5 HR · 270°</b></span>
+        <span class="df"><span class="dl">READ</span><b class="go">STRONG CA FINALIST</b></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="pitch" aria-label="the pitch">
+      <p>Picture the ordinary Tuesday. Coffee and a wood-fired morning at a brewery on Commercial Street, <b>Cooper</b> stretched out on the dog patio. A quick pull at <b>Ironworks</b>, groceries from a co-op that actually stocks the whole standard — wild-caught, pasture-raised, organic, no asterisks. Come evening, the Yuba is fifteen minutes north and running cold enough to swing a line through.</p>
+      <p>This isn't a compromise town. Nevada City is a walkable Victorian downtown that <b>National Geographic</b> named an LGBTQ+ haven; Grass Valley is the quieter, roomier neighbor where the forever-home math still works. Between them: gold-rush history, real theater, rose gardens, and trails that welcome a leashed 70-pound Bernedoodle.</p>
+    </section>
+  </div>
+
+  <div class="pullband">
+    <div class="wrap">
+      <p class="pull">The move is about money. The place doesn't have to be. <b>This one earns its keep on its own terms.</b></p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="pitch" aria-label="services lede">
+      <p>And the one thing that actually decides it — Maddy's services — is the strongest card California holds. The short version: <b>her support transfers here. It doesn't restart.</b></p>
+    </section>
+
+    <div class="lab slate"><b>Map</b> &nbsp; The lay of the land</div>
+    <section aria-label="area chart-map">
+      <div class="mapwrap">
+        <svg viewBox="0 0 760 540" role="img" aria-label="Hand-drawn chart of the Grass Valley and Nevada City area showing the two downtowns, the South Yuba River and trails to the north, and key life amenities.">
+          <defs></defs>
+          <!-- forested highland tint -->
+          <path d="M34,34 H726 V132 C560,108 300,150 34,138 Z" fill="rgba(74,90,62,.07)"/>
+          <!-- ground frame -->
+          <rect x="34" y="34" width="692" height="472" fill="none" stroke="var(--hairline)" stroke-width="1"/>
+          <!-- graticule -->
+          <g stroke="var(--hairline)" stroke-width="1" opacity=".55">
+            <line x1="196" y1="34" x2="196" y2="506"/><line x1="356" y1="34" x2="356" y2="506"/>
+            <line x1="516" y1="34" x2="516" y2="506"/><line x1="644" y1="34" x2="644" y2="506"/>
+            <line x1="34" y1="150" x2="726" y2="150"/><line x1="34" y1="300" x2="726" y2="300"/>
+            <line x1="34" y1="420" x2="726" y2="420"/>
+          </g>
+          <g font-family="'IBM Plex Mono',monospace" font-size="9" fill="var(--silver)" letter-spacing=".04em">
+            <text x="196" y="26" text-anchor="middle">121.15°W</text>
+            <text x="356" y="26" text-anchor="middle">121.10°W</text>
+            <text x="516" y="26" text-anchor="middle">121.05°W</text>
+            <text x="644" y="26" text-anchor="middle">121.00°W</text>
+            <text x="30" y="153" text-anchor="end">39.30°N</text>
+            <text x="30" y="303" text-anchor="end">39.24°N</text>
+            <text x="30" y="423" text-anchor="end">39.20°N</text>
+          </g>
+          <!-- SOUTH YUBA RIVER -->
+          <path d="M40,168 C150,150 250,132 356,124 C470,116 560,110 726,104" fill="none" stroke="var(--slate)" stroke-width="3.4" opacity=".9" stroke-linecap="round"/>
+          <path d="M40,168 C150,150 250,132 356,124 C470,116 560,110 726,104" fill="none" stroke="var(--sound)" stroke-width="1.3"/>
+          <text x="300" y="112" font-family="'Newsreader',serif" font-style="italic" font-size="15" fill="var(--slate)" transform="rotate(-5 300 112)">South Yuba River</text>
+          <!-- Deer Creek -->
+          <path d="M648,224 C604,266 556,300 512,344" fill="none" stroke="var(--slate-l)" stroke-width="1.8" opacity=".85"/>
+          <text x="600" y="286" font-family="'Newsreader',serif" font-style="italic" font-size="12" fill="var(--slate-l)" transform="rotate(42 600 286)">Deer Creek</text>
+          <!-- HWY 49 -->
+          <path d="M648,224 L512,352" fill="none" stroke="var(--rust)" stroke-width="1.6" stroke-dasharray="1 5" stroke-linecap="round" opacity=".85"/>
+          <g transform="translate(590,278)"><rect x="-11" y="-9" width="22" height="18" rx="2" fill="var(--paper)" stroke="var(--rust)" stroke-width="1"/><text x="0" y="4" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" fill="var(--rust)">49</text></g>
+          <!-- TRAILS (kelp) -->
+          <g font-family="'IBM Plex Mono',monospace" font-size="10.5" letter-spacing=".02em">
+            <path d="M232,120 l6,10 l-12,0 z" fill="var(--kelp)"/>
+            <text x="226" y="146" text-anchor="middle" fill="var(--kelp)">S. YUBA RIVER S.P.</text>
+            <text x="226" y="159" text-anchor="middle" fill="#9A958A" font-size="9">Buttermilk · Independence · Hoyt</text>
+            <path d="M604,96 l6,10 l-12,0 z" fill="var(--kelp)"/>
+            <text x="636" y="92" text-anchor="start" fill="var(--kelp)">PURDON</text>
+            <text x="636" y="104" text-anchor="start" fill="#9A958A" font-size="9">fish · swim</text>
+            <path d="M432,66 l6,10 l-12,0 z" fill="var(--kelp)"/>
+            <text x="446" y="70" text-anchor="start" fill="var(--kelp)">MALAKOFF DIGGINS</text>
+            <path d="M664,258 l6,10 l-12,0 z" fill="var(--kelp)"/>
+            <text x="660" y="284" text-anchor="middle" fill="var(--kelp)">HIRSCHMAN TR.</text>
+          </g>
+          <!-- TOWNS -->
+          <circle cx="648" cy="224" r="7" fill="var(--land)"/>
+          <circle cx="648" cy="224" r="12" fill="none" stroke="var(--land)" stroke-width="1" opacity=".4"/>
+          <text x="648" y="212" text-anchor="middle" font-family="'Schibsted Grotesk',sans-serif" font-weight="700" font-size="15" fill="var(--land)">NEVADA CITY</text>
+          <text x="648" y="243" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#9A958A">DOWNTOWN · THEATRE · MUSEUMS</text>
+          <circle cx="508" cy="360" r="7" fill="var(--land)"/>
+          <circle cx="508" cy="360" r="12" fill="none" stroke="var(--land)" stroke-width="1" opacity=".4"/>
+          <text x="508" y="392" text-anchor="middle" font-family="'Schibsted Grotesk',sans-serif" font-weight="700" font-size="15" fill="var(--land)">GRASS VALLEY</text>
+          <!-- AMENITIES -->
+          <g font-family="'IBM Plex Mono',monospace" font-size="9.5" letter-spacing=".02em">
+            <path d="M583,338 l7,7 l-7,7 l-7,-7 z" fill="var(--kelp)"/>
+            <circle cx="583" cy="345" r="12" fill="none" stroke="var(--kelp)" stroke-width="1" opacity=".5"/>
+            <text x="600" y="336" text-anchor="start" fill="var(--kelp)">REGIONAL CENTER ◆ DECISIVE</text>
+            <path d="M612,312 l5,8 l-10,0 z" fill="var(--rust)"/>
+            <text x="624" y="316" text-anchor="start" fill="var(--land)">BRIARPATCH CO-OP</text>
+            <path d="M556,344 l0,12 M550,350 l12,0" stroke="var(--slate)" stroke-width="2.4"/>
+            <text x="544" y="342" text-anchor="end" fill="var(--slate)">HOSPITAL</text>
+            <path d="M470,388 l5,8 l-10,0 z" fill="var(--rust)"/>
+            <text x="482" y="392" text-anchor="start" fill="var(--land)">IRONWORKS GYM</text>
+            <path d="M556,408 l6,10 l-12,0 z" fill="var(--rust)"/>
+            <text x="544" y="416" text-anchor="end" fill="var(--land)">EMPIRE MINE + GARDENS</text>
+          </g>
+          <!-- COMPASS + course line -->
+          <g transform="translate(130,452)">
+            <circle r="30" fill="var(--paper)" stroke="var(--hairline)" stroke-width="1"/>
+            <path d="M0,-30 L4,0 L0,30 L-4,0 Z" fill="var(--land)" opacity=".5"/>
+            <path d="M0,-30 L4,0 L-4,0 Z" fill="var(--land)"/>
+            <text x="0" y="-34" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="var(--land)">N</text>
+            <line x1="-30" y1="0" x2="-92" y2="0" stroke="var(--red)" stroke-width="2" stroke-dasharray="8 5"/>
+            <text x="-90" y="-8" text-anchor="start" font-family="'IBM Plex Mono',monospace" font-size="9" fill="var(--red)">270° W</text>
+            <text x="-90" y="16" text-anchor="start" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#9A958A">PACIFICA · 2.5 HR</text>
+          </g>
+        </svg>
+      </div>
+      <p class="mapcap"><b>Chart:</b> relative geography, real bearings. Twin downtowns linked by Hwy 49; the South Yuba and its trails ride the northern ridge; life-anchors — regional center, co-op, gym, hospital, Empire Mine — cluster tight between the towns. Course home runs due west, 270°.</p>
+    </section>
+
+    <div class="lab kelp"><b>A1</b> &nbsp; The scorecard — the fifteen, graded</div>
+    <section aria-label="scorecard">
+      <div class="decisive">
+        <div class="dh">◆ The decisive line</div>
+        <p><b>Alta California Regional Center serves Nevada County</b>, with a branch office at 333 Crown Point Circle in Grass Valley — a short drive, not a pilgrimage. Because a CA-to-CA move keeps Maddy inside the Lanterman system, her eligibility <b>transfers</b> (Bay Area's Golden Gate RC → ACRC) instead of restarting from zero. That's the single biggest edge California holds over the Oregon lane. <span class="w">Confirm her current active-client status before we move — that's the one thing to lock first.</span></p>
+      </div>
+      <div class="score">
+        <div class="srow"><div class="sk">Regional Center<small>01</small></div><div class="sv">ACRC covers the county; Grass Valley office; eligibility transfers within CA — no fresh determination.</div><div class="flagcell"><span class="flag key">DECISIVE ✓</span></div></div>
+        <div class="srow"><div class="sk">Healthcare<small>02</small></div><div class="sv">Sierra Nevada Memorial Hospital (Dignity Health) anchors the Grass Valley medical cluster.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Housing $<small>03</small></div><div class="sv"><span class="data">Grass Valley ~$505K–$597K</span> median; <span class="data">Nevada City ~$796K.</span> GV / Alta Sierra / Lake of the Pines is the forever-home lane.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">LGBTQ+<small>04</small></div><div class="sv">Nevada City named an LGBTQ+ haven (Nat Geo, 2025). Active Nevada County Pride — drag bingo, Thursday Night Market.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Clean eating<small>05</small></div><div class="sv"><b>BriarPatch Food Co-op</b> covers the whole standard in one anchor store.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Strength<small>06</small></div><div class="sv">Ironworks Gym — 24-hr, real iron. Backups: CW Elite, Limitless.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Fly fishing<small>07</small></div><div class="sv">The Yuba. Purdon Crossing scouted for both fishing and a swim hole.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Dog &amp; trails<small>08</small></div><div class="sv">Buttermilk Bend, Independence, Hirschman — dog-friendly and walkable (full list below).</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Climate<small>09</small></div><div class="sv">Sierra foothills ~2,400 ft — four real seasons, hot dry summers, cooler than the valley.</div><div class="flagcell"><span class="flag key">VERIFY</span></div></div>
+        <div class="srow"><div class="sk">Disaster &amp; insurance<small>10</small></div><div class="sv">Foothills carry real wildfire exposure; insurance cost/availability needs a quote before any offer.</div><div class="flagcell"><span class="flag watch">▸ WATCH</span></div></div>
+        <div class="srow"><div class="sk">Connectivity<small>11</small></div><div class="sv">Remote income travels; ~2.5 hr to SF, Sacramento closer for air. Confirm fiber at the address.</div><div class="flagcell"><span class="flag key">VERIFY</span></div></div>
+        <div class="srow"><div class="sk">Taxes &amp; CoL<small>12</small></div><div class="sv">CA tax applies statewide; Nevada City CoL runs <span class="data">~57% above national</span>, GV gentler. The premium buys the entitlement.</div><div class="flagcell"><span class="flag key">TRADEOFF</span></div></div>
+        <div class="srow"><div class="sk">Support proximity<small>13</small></div><div class="sv">~2.5 hr to Karston in SF — close enough to stay in each other's lives.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Neighborhoods<small>14</small></div><div class="sv">Forever-home lane: Grass Valley proper, Alta Sierra, Lake of the Pines.</div><div class="flagcell"><span class="flag key">WALK IT</span></div></div>
+        <div class="srow"><div class="sk">Vibe &amp; walkability<small>15</small></div><div class="sv">Broad St (Nevada City) + downtown Grass Valley — both real, both on foot.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+      </div>
+    </section>
+
+    <div class="lab kelp"><b>Trails</b> &nbsp; Where Cooper gets his miles</div>
+    <section aria-label="trails">
+      <p class="sec-p">All within ~20 minutes, most along the South Yuba. <span class="w">Ratings and stats are live from AllTrails — tap any name to open the trail.</span></p>
+      <div class="cards">
+        <div class="card trail">
+          <div class="ct"><h3>Buttermilk Bend Trail</h3><span class="meta"><span class="star">★</span> 4.8 · 2.5 mi · Easy</span></div>
+          <p>The showpiece stroll — a nearly level riverside path through the South Yuba canyon that erupts with wildflowers in spring. Wheelchair- and stroller-rated, wide enough for the whole household.</p>
+          <span class="tag">ADA</span><span class="tag">Dogs on leash</span><span class="tag slate">Wildflowers · River</span>
+          <a class="go-link" href="https://www.alltrails.com/trail/us/california/buttermilk-bend-trail" target="_blank" rel="noopener">Open on AllTrails →</a>
+        </div>
+        <div class="card trail">
+          <div class="ct"><h3>Independence Trail East</h3><span class="meta"><span class="star">★</span> 4.5 · 4.4 mi · Easy</span></div>
+          <p>A historic gold-mining flume converted into one of the country's first wheelchair-accessible wilderness trails. Wooden flumes, a waterfall ramp, river beaches to stop at.</p>
+          <span class="tag">ADA</span><span class="tag">Dogs on leash</span><span class="tag slate">Flume · Beach</span>
+          <a class="go-link" href="https://www.alltrails.com/trail/us/california/independence-trail-east--2" target="_blank" rel="noopener">Open on AllTrails →</a>
+        </div>
+        <div class="card trail">
+          <div class="ct"><h3>Hoyt Trail</h3><span class="meta"><span class="star">★</span> 4.7 · 1.7 mi · Moderate</span></div>
+          <p>Short, quiet, and it drops you at the water — a forested out-and-back to a river beach. The quick after-work reset with the dog.</p>
+          <span class="tag">Dogs on leash</span><span class="tag slate">River · Beach</span>
+          <a class="go-link" href="https://www.alltrails.com/trail/us/california/hoyt-trail" target="_blank" rel="noopener">Open on AllTrails →</a>
+        </div>
+        <div class="card trail">
+          <div class="ct"><h3>Hirschman Trail</h3><span class="meta"><span class="star">★</span> 4.3 · 4.3 mi · Easy</span></div>
+          <p>Right at Nevada City's edge — an easy forest loop around a historic mining pond. Kid- and dog-friendly, the everyday walk you don't have to plan for.</p>
+          <span class="tag">Dogs on leash</span><span class="tag slate">Pond · In-town</span>
+          <a class="go-link" href="https://www.alltrails.com/trail/us/california/hirschman-trail" target="_blank" rel="noopener">Open on AllTrails →</a>
+        </div>
+        <div class="card trail">
+          <div class="ct"><h3>Rim Trail &amp; Slaughterhouse Loop</h3><span class="meta"><span class="star">★</span> 4.1 · 5.8 mi · Moderate</span></div>
+          <p>A history hike through Malakoff Diggins — the eerie, beautiful hydraulic-mining scars turned state park. Leave Cooper home for this one; dogs aren't allowed on the loop.</p>
+          <span class="tag watch">No dogs</span><span class="tag slate">Historic · Views</span>
+          <a class="go-link" href="https://www.alltrails.com/trail/us/california/rim-trail-and-slaughterhouse-trail-loop" target="_blank" rel="noopener">Open on AllTrails →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="lab rust"><b>Table</b> &nbsp; Where you'd actually eat</div>
+    <section aria-label="restaurants">
+      <p class="sec-p">A real food town for its size — farm-to-table as the default, a brewery with a dog patio, and a couple of rooms worth dressing up for. <span class="w">Ratings live from Google; tap a name for the map.</span></p>
+      <div class="cards">
+        <div class="card eat">
+          <div class="ct"><h3>Heartwood Eatery</h3><span class="meta"><span class="star">★</span> 4.5</span></div>
+          <div class="role">The everyday clean plate</div>
+          <p>California cuisine done right — grain bowls, salmon, organic sourcing, and a sustainability streak through the whole place. This is the weekday lunch that fits the standard without thinking about it.</p>
+          <div class="sub">237 Commercial St, Nevada City · open daily</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Heartwood%20Eatery%20237%20Commercial%20St%20Nevada%20City%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card eat">
+          <div class="ct"><h3>Three Forks Bakery &amp; Brewing</h3><span class="meta"><span class="star">★</span> 4.6 · 1,321</span></div>
+          <div class="role">Pizza, beer, dog patio</div>
+          <p>Wood-fired pizza, bread baked on-site, beer brewed on-site, and a patio where Cooper gets his own water bowl. The default Saturday. Closed Tuesdays.</p>
+          <div class="sub">211 Commercial St, Nevada City · dog-friendly patio</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Three%20Forks%20Bakery%20Brewing%20211%20Commercial%20St%20Nevada%20City%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card eat">
+          <div class="ct"><h3>The River Downtown</h3><span class="meta"><span class="star">★</span> 4.9</span></div>
+          <div class="role">The special night out</div>
+          <p>Set inside a restored gold-smelting building, veg-forward and glowing — brick walls, small plates, local kombucha on tap. Currently limited hours, so it's a plan-ahead occasion, not a drop-in.</p>
+          <div class="sub">232 Commercial St, Nevada City · check hours</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=The%20River%20Downtown%20232%20Commercial%20St%20Nevada%20City%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card eat">
+          <div class="ct"><h3>Stone House</h3><span class="meta"><span class="star">★</span> 4.4 · 472</span></div>
+          <div class="role">Date night with David</div>
+          <p>Creative and a little playful — lion's mane and morel plates, oysters, live acoustic sets in the tavern. Bright, fresh, unpretentious.</p>
+          <div class="sub">107 Sacramento St, Nevada City · live music</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Stone%20House%20107%20Sacramento%20St%20Nevada%20City%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card eat">
+          <div class="ct"><h3>Golden Gate Saloon · Holbrook Hotel</h3><span class="meta"><span class="star">★</span> 4.7</span></div>
+          <div class="role">Historic tasting menu</div>
+          <p>Inside Grass Valley's landmark Holbrook Hotel — a four-course tasting-menu-and-wine-pairing kind of room, steakhouse bones, the oldest continuously operating saloon in the state.</p>
+          <div class="sub">212 W Main St, Grass Valley · reserve</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Golden%20Gate%20Saloon%20Holbrook%20Hotel%20212%20W%20Main%20St%20Grass%20Valley%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card eat">
+          <div class="ct"><h3>Twelve 28 Kitchen</h3><span class="meta"><span class="star">★</span> 4.9 · 512</span></div>
+          <div class="role">The destination splurge</div>
+          <p>Worth the 35-minute drive to Penn Valley — seasonal, locally sourced fine dining that people cross the county for. The room for a birthday, a signing, a win worth marking.</p>
+          <div class="sub">10118 Commercial Ave, Penn Valley · reservations</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Twelve%2028%20Kitchen%2010118%20Commercial%20Ave%20Penn%20Valley%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card eat">
+          <div class="ct"><h3>Tofanelli's Gold Country Bistro</h3><span class="meta"><span class="star">★</span> 4.5 · 1,443</span></div>
+          <div class="role">Sunday brunch, heated patio</div>
+          <p>An institution — famously long omelet menu, full bar, a walkable patio in downtown Grass Valley. The easy family-and-friends brunch when Karston drives up.</p>
+          <div class="sub">302 W Main St, Grass Valley · brunch daily</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Tofanelli%27s%20Gold%20Country%20Bistro%20302%20W%20Main%20St%20Grass%20Valley%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="lab slate"><b>Culture</b> &nbsp; History, stage &amp; gardens</div>
+    <section aria-label="culture and gardens">
+      <p class="sec-p">The upside of moving into a gold-rush town: the good bones are still standing, and most of it is free or nearly so.</p>
+      <div class="cards">
+        <div class="card cult">
+          <div class="ct"><h3>Empire Mine State Historic Park</h3><span class="meta"><span class="star">★</span> 4.8 · 2,088</span></div>
+          <div class="role">The flagship · ~$5</div>
+          <p>One of California's oldest and deepest gold mines, wrapped around a stone-and-timber estate with formal rose gardens, a working blacksmith, and guided cottage tours. Miles of quiet walking paths on the grounds.</p>
+          <div class="sub">10791 E Empire St, Grass Valley · open daily</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Empire%20Mine%20State%20Historic%20Park%20Grass%20Valley%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card cult">
+          <div class="ct"><h3>Nevada Theatre</h3><span class="meta"><span class="star">★</span> 4.8 · 244</span></div>
+          <div class="role">Live stage &amp; film · 1865</div>
+          <p>The oldest standing theater west of the Mississippi — still running live shows, music series, and movie nights, balcony and all. Mark Twain lectured here. A real third place, two blocks off Broad Street.</p>
+          <div class="sub">401 Broad St, Nevada City · year-round</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Nevada%20Theatre%20401%20Broad%20St%20Nevada%20City%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card cult">
+          <div class="ct"><h3>Crystal Hermitage Gardens</h3><span class="meta"><span class="star">★</span> 4.8 · 315</span></div>
+          <div class="role">Tulips &amp; meditation gardens</div>
+          <p>A hillside garden famous for its spring tulip bloom and quiet meditation terraces — the kind of stillness that's hard to buy back in the city. A short drive north of town.</p>
+          <div class="sub">14618 Tyler Foote Rd, Nevada City · seasonal</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Crystal%20Hermitage%20Gardens%20Nevada%20City%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card cult">
+          <div class="ct"><h3>Narrow Gauge Railroad Museum</h3><span class="meta"><span class="star">★</span> 4.8 · 263</span></div>
+          <div class="role">Free · steam locomotives</div>
+          <p>A small, lovingly kept museum with two operating steam locomotives and a railbus, run entirely by volunteers who'll give you the one-on-one tour. Free; leave a donation.</p>
+          <div class="sub">5 Kidder Ct, Nevada City · free</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Nevada%20County%20Narrow%20Gauge%20Railroad%20Museum%20Nevada%20City%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card cult">
+          <div class="ct"><h3>Firehouse No. 1 Museum</h3><span class="meta"><span class="star">★</span> 4.5</span></div>
+          <div class="role">Free · local &amp; Native history</div>
+          <p>The photogenic gingerbread firehouse on Main — inside, a Chinese Joss House and exhibits on the Nisenan, the miners, and the Victorian town. Small, free, worth the half hour.</p>
+          <div class="sub">214 Main St, Nevada City · free</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Firehouse%20No.%201%20Museum%20214%20Main%20St%20Nevada%20City%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card cult">
+          <div class="ct"><h3>Master Gardeners Demonstration Garden</h3><span class="meta"><span class="star">★</span> 4.8</span></div>
+          <div class="role">Free · California natives</div>
+          <p>A demonstration garden of California native and low-water plants, tended by the county master gardeners — a working reference for what actually thrives in a foothill yard. Useful and free.</p>
+          <div class="sub">1036 W Main St, Grass Valley · free</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Master%20Gardeners%20Demonstration%20Garden%201036%20W%20Main%20St%20Grass%20Valley%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="closeband">
+    <div class="wrap">
+      <div class="course" role="presentation"></div>
+      <div class="love">Ten greens, a river, a theater from 1865, and the one door — Maddy's services — that opens instead of closing. That's not a place you settle for. <b>That's a place you aim at.</b><br><br>Love.</div>
+      <div class="foot">
+        <span><b>SYSTEM</b> Due West (locked 2026-07-03) · content register 60/40</span><br>
+        <span><b>SOURCES</b> ACRC · Redfin · Movoto · Nat Geo 2025 · AllTrails · Google Places · scout notes</span><br>
+        <span><b>UPDATED</b> 2026-07-16 · <b>STATUS</b> Draft · not yet deployed</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
