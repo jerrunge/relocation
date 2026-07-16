@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Humboldt — Arcata / Eureka — The Relocation Briefcase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,900;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#EFEEE7;--card:#F6F5EE;--dusk:#242A32;--dusk-2:#1D2229;--land:#26251F;--body:#43423A;
+  --silver:#B7B1A4;--hairline:#D8D4C6;--slate:#46606F;--slate-l:#7D93A1;--sound:#AFC6D0;
+  --red:#D14625;--rust:#834112;--kelp:#4A5A3E;
+  --kelp-wash:rgba(74,90,62,.10);--rust-wash:rgba(131,65,18,.10);--slate-wash:rgba(70,96,111,.10);
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--land);font-family:'Newsreader',serif;line-height:1.72;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--hairline);transition:border-color .15s}
+a:hover{border-bottom-color:var(--slate)}
+:focus-visible{outline:2px solid var(--slate);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.disp{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;letter-spacing:-.02em}
+.course{position:relative;height:2px;background:repeating-linear-gradient(90deg,var(--red) 0 14px,transparent 14px 22px)}
+.course::after{content:'270°';position:absolute;right:0;top:-19px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--red);letter-spacing:.08em}
+.hero{background:linear-gradient(158deg,#1D2229 0%,#242A32 55%,#2B3540 100%);color:var(--paper);position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(175,198,208,.10),transparent 70%)}
+.hero .wrap{padding:34px 22px 36px;position:relative;z-index:1}
+.backlink{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;color:var(--sound);text-transform:uppercase;border:none;display:inline-block;margin-bottom:26px}
+.backlink:hover{color:var(--paper)}
+.hero .k{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:var(--sound);margin-bottom:18px;text-transform:uppercase}
+.hero .wordmark{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:12px;letter-spacing:.02em;color:var(--silver);margin-bottom:18px}
+.hero h1{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:clamp(40px,10vw,72px);line-height:.94;letter-spacing:-.03em;color:var(--paper)}
+.wm-course{max-width:420px;margin-top:18px}
+.hero .dek{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(18px,4vw,23px);color:var(--slate-l);margin-top:24px;max-width:24em;line-height:1.45}
+.hero .databar{border-top:1px solid rgba(215,212,198,.16);border-bottom:1px solid rgba(215,212,198,.16)}
+.hero .databar .dl{color:var(--slate-l)}.hero .databar b{color:var(--paper);font-weight:500}.hero .databar b.go{color:var(--sound)}
+.databar{display:flex;flex-wrap:wrap;gap:9px 26px;padding:15px 0;margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.databar .df{display:flex;gap:7px}
+.pitch{margin-top:34px}
+.pitch p{font-size:18.5px;color:var(--body);max-width:34em;margin-bottom:18px;line-height:1.7}
+.pitch p b{color:var(--land);font-weight:600}
+.pullband{background:linear-gradient(155deg,#242A32,#1D2229);color:var(--paper);margin:56px 0;padding:52px 0}
+.pullband .pull{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(22px,5vw,30px);line-height:1.4;color:var(--paper);padding-left:22px;border-left:3px solid var(--red);max-width:23em;margin:0}
+.pullband .pull b{color:var(--sound);font-weight:500;font-style:normal}
+.lab{--acc:var(--slate);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#9A958A;margin:66px 0 8px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.lab::before{content:'';display:inline-block;width:24px;height:3px;border-radius:2px;background:var(--acc)}
+.lab b{color:var(--acc);font-weight:600}
+.lab::after{content:'';flex:1;height:1px;background:var(--hairline)}
+.lab.kelp{--acc:var(--kelp)}.lab.rust{--acc:var(--rust)}.lab.slate{--acc:var(--slate)}
+.sec-p{font-size:16.5px;color:var(--body);max-width:37em;margin-bottom:8px;margin-top:6px}
+.sec-p .w{font-style:italic;color:var(--slate)}
+.mapwrap{margin-top:24px;background:linear-gradient(180deg,#F3F2EA,#EFEEE7);border:1px solid var(--hairline);border-radius:8px;padding:12px;box-shadow:0 16px 44px rgba(38,37,31,.08)}
+.mapwrap svg{width:100%;height:auto;display:block;border-radius:4px}
+.mapcap{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9A958A;letter-spacing:.03em;margin-top:10px;padding:0 4px;line-height:1.6}
+.mapcap b{color:var(--slate);font-weight:500}
+.decisive{background:linear-gradient(180deg,rgba(74,90,62,.11),rgba(74,90,62,.04));border:1px solid rgba(74,90,62,.22);border-left:3px solid var(--kelp);border-radius:5px;padding:20px 22px;margin:26px 0}
+.decisive .dh{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;color:var(--kelp);text-transform:uppercase;margin-bottom:9px}
+.decisive p{font-size:15.5px;margin-bottom:0;color:var(--body);max-width:40em}
+.decisive p b{color:var(--land)}.decisive .w{font-style:italic;color:var(--kelp)}
+.score{margin-top:6px}
+.srow{display:grid;grid-template-columns:148px 1fr 92px;gap:14px;padding:15px 0;border-bottom:1px solid var(--hairline);align-items:start}
+.srow .sk{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:14px;color:var(--land);letter-spacing:-.005em;line-height:1.25}
+.srow .sk small{display:block;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:9px;letter-spacing:.06em;color:#9A958A;margin-top:4px}
+.srow .sv{font-size:14px;color:var(--body);line-height:1.55}
+.srow .sv .data{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--land);font-variant-numeric:tabular-nums}
+.flag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.05em;text-align:center;white-space:nowrap;display:inline-block;padding:3px 7px;border-radius:4px}
+.flag.go{color:var(--kelp);background:var(--kelp-wash)}.flag.watch{color:var(--rust);background:var(--rust-wash)}.flag.key{color:var(--slate);background:var(--slate-wash)}
+.flagcell{text-align:right;padding-top:1px}
+@media(max-width:600px){.srow{grid-template-columns:1fr 84px;gap:5px 12px}.srow .sk{grid-column:1}.srow .sv{grid-column:1 / -1}.flagcell{grid-row:1;grid-column:2}}
+.cards{margin-top:24px;display:grid;gap:14px}
+.card{background:var(--card);border:1px solid var(--hairline);border-top:3px solid var(--silver);border-radius:7px;padding:19px 22px 20px;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(38,37,31,.10)}
+.card.trail{border-top-color:var(--kelp)}.card.eat{border-top-color:var(--rust)}.card.cult{border-top-color:var(--slate)}
+.card .ct{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.card h3{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.01em;color:var(--land);line-height:1.15}
+.card .meta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--slate);font-variant-numeric:tabular-nums;letter-spacing:.02em;white-space:nowrap}
+.card .star{color:var(--rust)}
+.card .role{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin:9px 0 6px;color:#9A958A}
+.card.trail .role{color:var(--kelp)}.card.eat .role{color:var(--rust)}.card.cult .role{color:var(--slate)}
+.card p{font-size:15px;color:var(--body);line-height:1.6;margin-top:4px;max-width:44em}
+.card .sub{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9A958A;margin-top:10px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.card .go-link{display:inline-block;margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--slate);border-bottom:1px solid var(--hairline)}
+.card .go-link:hover{border-bottom-color:var(--slate);color:var(--land)}
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;padding:3px 7px;margin:8px 6px 0 0;border:1px solid transparent}
+.card.trail .tag{color:var(--kelp);background:var(--kelp-wash)}.card.cult .tag{color:var(--slate);background:var(--slate-wash)}
+.tag.slate{color:var(--slate)!important;background:var(--slate-wash)!important}.tag.watch{color:var(--rust)!important;background:var(--rust-wash)!important}
+.closeband{background:linear-gradient(158deg,#1D2229,#242A32 70%,#2B3540);color:var(--paper);margin-top:72px;padding:46px 0 40px}
+.closeband .course{max-width:300px;margin-bottom:26px}
+.closeband .love{font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:var(--paper);margin:0 0 22px;line-height:1.5;max-width:31em}
+.closeband .love b{color:var(--sound);font-style:normal;font-weight:500}
+.foot{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.05em;color:var(--slate-l);line-height:2;font-variant-numeric:tabular-nums}
+.foot b{color:var(--sound);font-weight:500}
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="wrap">
+      <a class="backlink" href="index.html">← The Relocation Briefcase</a>
+      <div class="k">Candidate A2 · California · Lanterman Entitlement</div>
+      <div class="wordmark">JEREMY RUNGE</div>
+      <h1 class="disp">Humboldt —<br>Arcata &amp; Eureka</h1>
+      <div class="course wm-course" role="presentation"></div>
+      <p class="dek">The redwood coast: cheapest rent, coolest summers, and rivers that make the Yuba look like a warm-up.</p>
+      <div class="databar" aria-label="destination data">
+        <span class="df"><span class="dl">POS</span><b>40.87°N 124.08°W</b></span>
+        <span class="df"><span class="dl">3BD/2BA RENT</span><b class="go">~$2,200–2,600</b></span>
+        <span class="df"><span class="dl">SUMMER HIGHS</span><b>~62–65°F</b></span>
+        <span class="df"><span class="dl">TO SF</span><b>~5 HR · ✈ 1 HR</b></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="pitch" aria-label="the pitch">
+      <p>Start with the thing your budget actually cares about: a real <b>3-bed, 2-bath rents for $2,200–2,600</b> here — the most breathing room of anywhere on the list. Then the part your body cares about: summer highs sit around <b>62–65°F</b>. The sustained heat you can't take simply doesn't happen on this coast.</p>
+      <p>And the life is genuinely rich. <b>Cal Poly Humboldt</b> keeps Arcata one of the most openly LGBTQ-affirming small towns in California. The <b>North Coast Co-op</b> is one of the oldest and best in the country — the whole clean-eating standard under one roof. Cooper gets redwoods from downtown, the Arcata Marsh, and miles of empty beach. And the fishing is a different league: the <b>Mad, Eel, Trinity, Klamath, and Smith</b> are legendary steelhead and salmon water.</p>
+    </section>
+  </div>
+
+  <div class="pullband">
+    <div class="wrap">
+      <p class="pull">Lowest rent, lowest fire risk, coolest air, best water. <b>On the criteria, nothing else comes close — the cost is the distance.</b></p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="lab slate"><b>Map</b> &nbsp; The lay of the coast</div>
+    <section aria-label="area chart-map">
+      <div class="mapwrap">
+        <svg viewBox="0 0 760 540" role="img" aria-label="Hand-drawn chart of the Humboldt coast: Eureka, Arcata and McKinleyville along Highway 101 on Humboldt Bay, the Pacific to the west, redwoods east, with key amenities marked.">
+          <!-- ocean -->
+          <rect x="34" y="34" width="120" height="472" fill="rgba(70,96,111,.10)"/>
+          <text x="70" y="270" font-family="'Newsreader',serif" font-style="italic" font-size="15" fill="var(--slate)" transform="rotate(-90 70 270)">Pacific Ocean</text>
+          <!-- redwood band east -->
+          <path d="M470,34 H726 V506 H470 C520,380 500,180 470,34 Z" fill="rgba(74,90,62,.08)"/>
+          <text x="600" y="70" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10.5" fill="var(--kelp)">REDWOODS</text>
+          <text x="600" y="84" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#9A958A">Prairie Creek ↑ · Fern Canyon 45 min</text>
+          <!-- frame -->
+          <rect x="34" y="34" width="692" height="472" fill="none" stroke="var(--hairline)" stroke-width="1"/>
+          <!-- coastline -->
+          <path d="M154,34 C170,120 140,200 168,300 C150,380 176,450 160,506" fill="none" stroke="var(--slate)" stroke-width="2" opacity=".7"/>
+          <!-- Humboldt Bay -->
+          <path d="M168,300 C210,300 250,320 258,360 C250,400 210,412 175,405 C168,370 172,335 168,300 Z" fill="rgba(175,198,208,.55)" stroke="var(--slate-l)" stroke-width="1"/>
+          <text x="205" y="360" text-anchor="middle" font-family="'Newsreader',serif" font-style="italic" font-size="12" fill="var(--slate)">Humboldt Bay</text>
+          <!-- rivers -->
+          <path d="M470,250 C400,255 330,262 270,250" fill="none" stroke="var(--slate-l)" stroke-width="1.6" opacity=".85"/>
+          <text x="400" y="244" text-anchor="middle" font-family="'Newsreader',serif" font-style="italic" font-size="11.5" fill="var(--slate-l)">Mad River</text>
+          <path d="M470,470 C400,468 320,464 250,458" fill="none" stroke="var(--slate-l)" stroke-width="1.6" opacity=".85"/>
+          <text x="360" y="484" text-anchor="middle" font-family="'Newsreader',serif" font-style="italic" font-size="11.5" fill="var(--slate-l)">Eel River</text>
+          <text x="676" y="250" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="9" fill="var(--slate)">TRINITY / KLAMATH ↗</text>
+          <text x="676" y="262" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#9A958A">steelhead runs</text>
+          <!-- Hwy 101 -->
+          <path d="M250,430 C258,360 262,300 270,235 C266,180 210,140 200,120" fill="none" stroke="var(--rust)" stroke-width="1.5" stroke-dasharray="1 5" stroke-linecap="round" opacity=".85"/>
+          <g transform="translate(300,180)"><rect x="-12" y="-9" width="26" height="18" rx="2" fill="var(--paper)" stroke="var(--rust)" stroke-width="1"/><text x="1" y="4" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="var(--rust)">101</text></g>
+          <!-- TOWNS -->
+          <circle cx="250" cy="405" r="7" fill="var(--land)"/><circle cx="250" cy="405" r="12" fill="none" stroke="var(--land)" stroke-width="1" opacity=".4"/>
+          <text x="266" y="424" text-anchor="start" font-family="'Schibsted Grotesk',sans-serif" font-weight="700" font-size="15" fill="var(--land)">EUREKA</text>
+          <circle cx="270" cy="270" r="7" fill="var(--land)"/><circle cx="270" cy="270" r="12" fill="none" stroke="var(--land)" stroke-width="1" opacity=".4"/>
+          <text x="286" y="266" text-anchor="start" font-family="'Schibsted Grotesk',sans-serif" font-weight="700" font-size="15" fill="var(--land)">ARCATA</text>
+          <circle cx="240" cy="150" r="6" fill="var(--land)"/>
+          <text x="254" y="146" text-anchor="start" font-family="'Schibsted Grotesk',sans-serif" font-weight="700" font-size="13" fill="var(--land)">McKINLEYVILLE</text>
+          <text x="254" y="160" text-anchor="start" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#9A958A">✈ ACV · 24-HR GYM</text>
+          <!-- amenities -->
+          <g font-family="'IBM Plex Mono',monospace" font-size="9.5" letter-spacing=".02em">
+            <path d="M245,398 l7,7 l-7,7 l-7,-7 z" fill="var(--kelp)"/><circle cx="245" cy="405" r="12" fill="none" stroke="var(--kelp)" stroke-width="1" opacity=".5"/>
+            <text x="235" y="452" text-anchor="middle" fill="var(--kelp)">REGIONAL CENTER ◆</text>
+            <path d="M300,300 l5,8 l-10,0 z" fill="var(--kelp)"/>
+            <text x="312" y="304" text-anchor="start" fill="var(--land)">N. COAST CO-OP</text>
+            <path d="M228,300 l0,12 M222,306 l12,0" stroke="var(--slate)" stroke-width="2.2"/>
+            <text x="216" y="298" text-anchor="end" fill="var(--slate)">HOSPITAL</text>
+            <path d="M360,290 l5,8 l-10,0 z" fill="var(--kelp)"/>
+            <text x="372" y="294" text-anchor="start" fill="var(--kelp)">COMMUNITY FOREST</text>
+            <path d="M300,340 l5,8 l-10,0 z" fill="var(--kelp)"/>
+            <text x="312" y="344" text-anchor="start" fill="var(--kelp)">ARCATA MARSH</text>
+            <path d="M198,112 l5,8 l-10,0 z" fill="var(--kelp)"/>
+            <text x="212" y="116" text-anchor="start" fill="var(--kelp)">TRINIDAD HEAD</text>
+          </g>
+          <!-- compass + course to SF (south) -->
+          <g transform="translate(660,452)">
+            <circle r="30" fill="var(--paper)" stroke="var(--hairline)" stroke-width="1"/>
+            <path d="M0,-30 L4,0 L0,30 L-4,0 Z" fill="var(--land)" opacity=".5"/><path d="M0,-30 L4,0 L-4,0 Z" fill="var(--land)"/>
+            <text x="0" y="-34" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="var(--land)">N</text>
+            <line x1="0" y1="30" x2="0" y2="70" stroke="var(--red)" stroke-width="2" stroke-dasharray="8 5"/>
+            <text x="0" y="86" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="var(--red)">SF ~5 HR ↓</text>
+          </g>
+        </svg>
+      </div>
+      <p class="mapcap"><b>Chart:</b> relative geography, real bearings. Three towns strung along Highway 101 on Humboldt Bay — Eureka south, Arcata and its co-op mid-bay, McKinleyville and the airport north. Pacific to the west, redwoods and steelhead rivers to the east. SF is ~5 hours south, or a one-hour flight from ACV.</p>
+    </section>
+
+    <div class="lab kelp"><b>A2</b> &nbsp; The scorecard — the fifteen, graded</div>
+    <section aria-label="scorecard">
+      <div class="decisive">
+        <div class="dh">◆ The decisive line</div>
+        <p><b>Redwood Coast Regional Center (Eureka) serves Humboldt</b> — so the move keeps Maddy inside California's Lanterman system. Her eligibility <b>transfers</b> (Golden Gate RC → Redwood Coast RC), not restarts; the entitlement is guaranteed statewide. <span class="w">As always, confirm her active-client status before any move — that's the one thing to lock first.</span></p>
+      </div>
+      <div class="score">
+        <div class="srow"><div class="sk">Regional Center<small>01</small></div><div class="sv">Redwood Coast RC (Eureka) covers the county; eligibility transfers within CA — no fresh determination.</div><div class="flagcell"><span class="flag key">DECISIVE ✓</span></div></div>
+        <div class="srow"><div class="sk">Healthcare<small>02</small></div><div class="sv">Providence St. Joseph Hospital (Eureka) + Mad River Community Hospital (Arcata) anchor the corridor.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Housing — rent<small>03</small></div><div class="sv">3bd/2ba rentals <span class="data">~$2,200–2,600</span> — the most comfortably under $3K of anywhere we've looked.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">LGBTQ+<small>04</small></div><div class="sv">Cal Poly Humboldt anchors one of the most openly affirming small-town scenes in the state; active Eureka Pride.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Clean eating<small>05</small></div><div class="sv"><b>North Coast Co-op</b> (Arcata + Eureka) — organic, local, wild-caught, the whole standard.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Strength<small>06</small></div><div class="sv">HealthSPORT (McKinleyville location 24-hr, full weight room) + LiFTED Arcata (Olympic lifting).</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Fly fishing<small>07</small></div><div class="sv">Elite. Mad, Eel, Trinity, Klamath, Smith — legendary steelhead and salmon within reach.</div><div class="flagcell"><span class="flag go">GREEN ★</span></div></div>
+        <div class="srow"><div class="sk">Dog &amp; trails<small>08</small></div><div class="sv">Arcata Community Forest, Arcata Marsh, Trinidad, and miles of empty beach (list below).</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Climate<small>09</small></div><div class="sv">Cool and foggy; summer highs ~62–65°F — no sustained heat. Trade: gray, wet winters.</div><div class="flagcell"><span class="flag go">GREEN ✓</span></div></div>
+        <div class="srow"><div class="sk">Disaster &amp; insurance<small>10</small></div><div class="sv">Among the <b>lowest wildfire risk in California</b> (coastal fog belt). A real edge over the foothills.</div><div class="flagcell"><span class="flag go">GREEN ★</span></div></div>
+        <div class="srow"><div class="sk">Connectivity<small>11</small></div><div class="sv">Broadband in Arcata/Eureka; remote work fine. Confirm fiber at the specific address.</div><div class="flagcell"><span class="flag key">VERIFY</span></div></div>
+        <div class="srow"><div class="sk">Taxes &amp; CoL<small>12</small></div><div class="sv">CA tax statewide; overall cost of living moderate, rents low — the budget breathes here.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Support proximity<small>13</small></div><div class="sv"><b>~5 hr drive</b> to Karston in SF; ACV (McKinleyville) flies to SFO in ~1 hr. This is the real cost.</div><div class="flagcell"><span class="flag watch">▸ WATCH</span></div></div>
+        <div class="srow"><div class="sk">Neighborhoods<small>14</small></div><div class="sv">Arcata (walkable college town), Bayside (quiet, semi-rural), Eureka (Victorian Old Town), McKinleyville (newer, affordable).</div><div class="flagcell"><span class="flag key">WALK IT</span></div></div>
+        <div class="srow"><div class="sk">Vibe &amp; walkability<small>15</small></div><div class="sv">Arcata Plaza and Eureka's Old Town are both genuinely walkable, characterful, on foot.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+      </div>
+    </section>
+
+    <div class="lab slate"><b>The Bay</b> &nbsp; Getting south, for the record</div>
+    <section aria-label="getting to the bay">
+      <div class="decisive" style="background:linear-gradient(180deg,rgba(70,96,111,.10),rgba(70,96,111,.03));border-color:rgba(70,96,111,.22);border-left-color:var(--slate)">
+        <div class="dh" style="color:var(--slate)">▸ To SF / Berkeley — for reference</div>
+        <p>The honest number: SF is <b>~5 hours by car</b>. There's no rail; the practical fast option is flying — <b>ACV in McKinleyville to SFO in about an hour</b>. Transit-only to Berkeley (Amtrak Thruway bus to the Bay, then BART) runs most of a day and isn't realistic. So the Bay is a plane ride or a road trip, not a day-trip. Noted as a fact of the location; weight it against everything Humboldt wins on.</p>
+      </div>
+    </section>
+
+    <div class="lab kelp"><b>Trails</b> &nbsp; Redwoods, marsh &amp; coast</div>
+    <section aria-label="trails">
+      <p class="sec-p">Redwood forest minutes from downtown, a flat marsh loop, a headland over the Pacific. <span class="w">Live from AllTrails — tap any name to open the trail.</span></p>
+      <div class="cards">
+        <div class="card trail">
+          <div class="ct"><h3>Arcata Community Forest Loop</h3><span class="meta"><span class="star">★</span> 4.8 · 4.2 mi · Moderate</span></div>
+          <p>A second-growth redwood forest that starts at the edge of downtown Arcata — mossy, quiet, all yours. The Fickle Hill / Big Rock / Meadow loop is the classic.</p>
+          <span class="tag">Dogs on leash</span><span class="tag slate">Redwoods · In-town</span>
+          <a class="go-link" href="https://www.alltrails.com/trail/us/california/fickle-hill-grade-9-big-rock-trail-4-and-meadow-trail-3-loop" target="_blank" rel="noopener">Open on AllTrails →</a>
+        </div>
+        <div class="card trail">
+          <div class="ct"><h3>Arcata Marsh — Gearheart &amp; Brackish Pond</h3><span class="meta"><span class="star">★</span> 4.6 · 1.4 mi · Easy</span></div>
+          <p>The everyday walk: a flat, wheelchair-rated loop through a restored bayfront marsh that's a nationally known birding spot. Cooper-friendly, coffee-in-hand easy.</p>
+          <span class="tag">ADA</span><span class="tag">Dogs on leash</span><span class="tag slate">Birding · Bay</span>
+          <a class="go-link" href="https://www.alltrails.com/trail/us/california/gearheart-marsh-and-brackish-pond-loop" target="_blank" rel="noopener">Open on AllTrails →</a>
+        </div>
+        <div class="card trail">
+          <div class="ct"><h3>Trinidad Head / Tsurai Loop</h3><span class="meta"><span class="star">★</span> 4.7 · 1.8 mi · Easy</span></div>
+          <p>A short climb around a headland north of town — whales, sea stacks, wildflowers, and a beach at the bottom. The prettiest hour on the coast.</p>
+          <span class="tag">Dogs on leash</span><span class="tag slate">Coast · Beach</span>
+          <a class="go-link" href="https://www.alltrails.com/trail/us/california/trinidad-head" target="_blank" rel="noopener">Open on AllTrails →</a>
+        </div>
+        <div class="card trail">
+          <div class="ct"><h3>Fern Canyon Loop</h3><span class="meta"><span class="star">★</span> 4.9 · 1.2 mi · Easy</span></div>
+          <p>The showpiece — a slot canyon walled in five-finger ferns in Prairie Creek Redwoods, about 45 minutes north (you've seen it in <em>Jurassic Park</em>). Leave Cooper home; dogs aren't allowed.</p>
+          <span class="tag watch">No dogs</span><span class="tag slate">Redwoods · Iconic</span>
+          <a class="go-link" href="https://www.alltrails.com/trail/us/california/fern-canyon-loop-trail" target="_blank" rel="noopener">Open on AllTrails →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="lab rust"><b>Table</b> &nbsp; Where you'd actually eat</div>
+    <section aria-label="restaurants">
+      <p class="sec-p">A quietly serious food town — wood fire, fresh-off-the-boat seafood, and a co-op that half the county cooks from. <span class="w">Ratings live from Google; tap a name for the map.</span></p>
+      <div class="cards">
+        <div class="card eat">
+          <div class="ct"><h3>Brick &amp; Fire Bistro</h3><span class="meta"><span class="star">★</span> 4.6 · 891</span></div>
+          <div class="role">The dinner mainstay</div>
+          <p>Wood-fired, Mediterranean-leaning, and beloved — pan-seared local steelhead, mushroom cobbler, brick-oven everything. The reliable Eureka night out.</p>
+          <div class="sub">1630 F St, Eureka · dinner, closed Tue</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Brick%20and%20Fire%20Bistro%201630%20F%20St%20Eureka%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card eat">
+          <div class="ct"><h3>The Kitchen Arcata</h3><span class="meta"><span class="star">★</span> 4.8</span></div>
+          <div class="role">The tiny local gem</div>
+          <p>A one-chef, everything-local spot where the menu is small and the care is enormous — often a single beautifully done thing per night. Limited hours; plan around it.</p>
+          <div class="sub">1551 G St, Arcata · Wed &amp; Fri evenings</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Kitchen%20Arcata%201551%20G%20St%20Arcata%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card eat">
+          <div class="ct"><h3>Smalls Fusion Comfort</h3><span class="meta"><span class="star">★</span> 4.8 · 112</span></div>
+          <div class="role">Creative night</div>
+          <p>A cozy Eureka favorite doing inventive comfort food — the crab-fat wings have a cult following. Small room, big flavors, warm host.</p>
+          <div class="sub">1323 5th St, Eureka · dinner, closed Mon</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Smalls%20Fusion%20Comfort%201323%205th%20St%20Eureka%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card eat">
+          <div class="ct"><h3>Café Waterfront</h3><span class="meta"><span class="star">★</span> 4.3 · 1,069</span></div>
+          <div class="role">Seafood on the bay</div>
+          <p>A historic Old Town room on the National Register — oysters, chowder, and fish landed a few blocks away. The Eureka classic for a reason.</p>
+          <div class="sub">102 F St, Eureka · lunch &amp; dinner</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20Waterfront%20102%20F%20St%20Eureka%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card eat">
+          <div class="ct"><h3>McIntosh Farm Country Store</h3><span class="meta"><span class="star">★</span> 4.7 · 556</span></div>
+          <div class="role">Breakfast, the good kind</div>
+          <p>A family country store on the edge of Arcata doing hearty breakfast burritos, biscuits and gravy, and famous fresh donuts. The Saturday-morning move.</p>
+          <div class="sub">1264 Giuntoli Ln, Arcata · breakfast/lunch</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=McIntosh%20Farm%20Country%20Store%201264%20Giuntoli%20Ln%20Arcata%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="lab slate"><b>Culture</b> &nbsp; Art, redwoods &amp; Victorians</div>
+    <section aria-label="culture">
+      <p class="sec-p">Small, characterful, and mostly cheap or free — a Carnegie-library art museum, a redwood zoo, and the most photographed Victorian in California.</p>
+      <div class="cards">
+        <div class="card cult">
+          <div class="ct"><h3>Morris Graves Museum of Art</h3><span class="meta"><span class="star">★</span> 4.8 · 135</span></div>
+          <div class="role">Art in a Carnegie library</div>
+          <p>Eureka's art museum, housed in a beautifully restored 1904 Carnegie Library — rotating exhibits of regional and nationally known artists, a great little gift shop, and a real heart in the local scene.</p>
+          <div class="sub">636 F St, Eureka · Wed–Sun</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Morris%20Graves%20Museum%20of%20Art%20636%20F%20St%20Eureka%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card cult">
+          <div class="ct"><h3>Sequoia Park Zoo &amp; Gardens</h3><span class="meta"><span class="star">★</span> 4.5 · 3,598</span></div>
+          <div class="role">A zoo inside a redwood grove</div>
+          <p>A small, well-loved zoo set in an old-growth redwood park, with a canopy skywalk and suspension bridges through the treetops. The surrounding Sequoia Park gardens and trails are free.</p>
+          <div class="sub">3414 W St, Eureka · daily</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sequoia%20Park%20Zoo%20Eureka%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card cult">
+          <div class="ct"><h3>Carson Mansion</h3><span class="meta"><span class="star">★</span> 4.5 · 767</span></div>
+          <div class="role">The great Victorian · 1884</div>
+          <p>Possibly the most photographed Victorian house in America — a towering monument to the redwood-lumber era. It's a private club, so it's an exterior-and-park admire, but it's the icon of Eureka's Old Town.</p>
+          <div class="sub">143 M St, Eureka · exterior</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Carson%20Mansion%20143%20M%20St%20Eureka%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="closeband">
+    <div class="wrap">
+      <div class="course" role="presentation"></div>
+      <div class="love">Rent that breathes, air that never bakes, fire risk near zero, and rivers most anglers only dream about. The whole case rests on one question: <b>can you live five hours from Karston?</b><br><br>Love.</div>
+      <div class="foot">
+        <span><b>SYSTEM</b> Due West (locked 2026-07-03) · content register 60/40</span><br>
+        <span><b>SOURCES</b> Redwood Coast RC · Zillow / Zumper / Rent.com (3bd/2ba, mid-2026) · AllTrails · Google Places · NOAA climate</span><br>
+        <span><b>UPDATED</b> 2026-07-16 · <b>STATUS</b> Researched · scout pending</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

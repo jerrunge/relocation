@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santa Rosa / Sonoma — The Relocation Briefcase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,900;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#EFEEE7;--card:#F6F5EE;--dusk:#242A32;--dusk-2:#1D2229;--land:#26251F;--body:#43423A;
+  --silver:#B7B1A4;--hairline:#D8D4C6;--slate:#46606F;--slate-l:#7D93A1;--sound:#AFC6D0;
+  --red:#D14625;--rust:#834112;--kelp:#4A5A3E;
+  --kelp-wash:rgba(74,90,62,.10);--rust-wash:rgba(131,65,18,.10);--slate-wash:rgba(70,96,111,.10);
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--land);font-family:'Newsreader',serif;line-height:1.72;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--hairline);transition:border-color .15s}
+a:hover{border-bottom-color:var(--slate)}
+:focus-visible{outline:2px solid var(--slate);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.disp{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;letter-spacing:-.02em}
+.course{position:relative;height:2px;background:repeating-linear-gradient(90deg,var(--red) 0 14px,transparent 14px 22px)}
+.course::after{content:'270°';position:absolute;right:0;top:-19px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--red);letter-spacing:.08em}
+.hero{background:linear-gradient(158deg,#1D2229 0%,#242A32 55%,#2B3540 100%);color:var(--paper);position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(175,198,208,.10),transparent 70%)}
+.hero .wrap{padding:34px 22px 36px;position:relative;z-index:1}
+.backlink{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;color:var(--sound);text-transform:uppercase;border:none;display:inline-block;margin-bottom:26px}
+.backlink:hover{color:var(--paper)}
+.hero .k{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:var(--sound);margin-bottom:18px;text-transform:uppercase}
+.hero .wordmark{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:12px;letter-spacing:.02em;color:var(--silver);margin-bottom:18px}
+.hero h1{font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:clamp(40px,10vw,72px);line-height:.94;letter-spacing:-.03em;color:var(--paper)}
+.wm-course{max-width:420px;margin-top:18px}
+.hero .dek{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(18px,4vw,23px);color:var(--slate-l);margin-top:24px;max-width:24em;line-height:1.45}
+.hero .databar{border-top:1px solid rgba(215,212,198,.16);border-bottom:1px solid rgba(215,212,198,.16)}
+.hero .databar .dl{color:var(--slate-l)}.hero .databar b{color:var(--paper);font-weight:500}.hero .databar b.go{color:var(--sound)}.hero .databar b.warn{color:#E0A58F}
+.databar{display:flex;flex-wrap:wrap;gap:9px 26px;padding:15px 0;margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.databar .df{display:flex;gap:7px}
+.pitch{margin-top:34px}
+.pitch p{font-size:18.5px;color:var(--body);max-width:34em;margin-bottom:18px;line-height:1.7}
+.pitch p b{color:var(--land);font-weight:600}
+.pullband{background:linear-gradient(155deg,#242A32,#1D2229);color:var(--paper);margin:56px 0;padding:52px 0}
+.pullband .pull{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(22px,5vw,30px);line-height:1.4;color:var(--paper);padding-left:22px;border-left:3px solid var(--red);max-width:23em;margin:0}
+.pullband .pull b{color:var(--sound);font-weight:500;font-style:normal}
+.lab{--acc:var(--slate);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#9A958A;margin:66px 0 8px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.lab::before{content:'';display:inline-block;width:24px;height:3px;border-radius:2px;background:var(--acc)}
+.lab b{color:var(--acc);font-weight:600}
+.lab::after{content:'';flex:1;height:1px;background:var(--hairline)}
+.lab.kelp{--acc:var(--kelp)}.lab.rust{--acc:var(--rust)}.lab.slate{--acc:var(--slate)}
+.sec-p{font-size:16.5px;color:var(--body);max-width:37em;margin-bottom:8px;margin-top:6px}
+.sec-p .w{font-style:italic;color:var(--slate)}
+.mapwrap{margin-top:24px;background:linear-gradient(180deg,#F3F2EA,#EFEEE7);border:1px solid var(--hairline);border-radius:8px;padding:12px;box-shadow:0 16px 44px rgba(38,37,31,.08)}
+.mapwrap svg{width:100%;height:auto;display:block;border-radius:4px}
+.mapcap{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9A958A;letter-spacing:.03em;margin-top:10px;padding:0 4px;line-height:1.6}
+.mapcap b{color:var(--slate);font-weight:500}
+.decisive{background:linear-gradient(180deg,rgba(74,90,62,.11),rgba(74,90,62,.04));border:1px solid rgba(74,90,62,.22);border-left:3px solid var(--kelp);border-radius:5px;padding:20px 22px;margin:26px 0}
+.decisive .dh{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;color:var(--kelp);text-transform:uppercase;margin-bottom:9px}
+.decisive p{font-size:15.5px;margin-bottom:0;color:var(--body);max-width:40em}
+.decisive p b{color:var(--land)}.decisive .w{font-style:italic;color:var(--kelp)}
+.score{margin-top:6px}
+.srow{display:grid;grid-template-columns:148px 1fr 92px;gap:14px;padding:15px 0;border-bottom:1px solid var(--hairline);align-items:start}
+.srow .sk{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:14px;color:var(--land);letter-spacing:-.005em;line-height:1.25}
+.srow .sk small{display:block;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:9px;letter-spacing:.06em;color:#9A958A;margin-top:4px}
+.srow .sv{font-size:14px;color:var(--body);line-height:1.55}
+.srow .sv .data{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--land);font-variant-numeric:tabular-nums}
+.flag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.05em;text-align:center;white-space:nowrap;display:inline-block;padding:3px 7px;border-radius:4px}
+.flag.go{color:var(--kelp);background:var(--kelp-wash)}.flag.watch{color:var(--rust);background:var(--rust-wash)}.flag.key{color:var(--slate);background:var(--slate-wash)}
+.flagcell{text-align:right;padding-top:1px}
+@media(max-width:600px){.srow{grid-template-columns:1fr 84px;gap:5px 12px}.srow .sk{grid-column:1}.srow .sv{grid-column:1 / -1}.flagcell{grid-row:1;grid-column:2}}
+.cards{margin-top:24px;display:grid;gap:14px}
+.card{background:var(--card);border:1px solid var(--hairline);border-top:3px solid var(--silver);border-radius:7px;padding:19px 22px 20px;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(38,37,31,.10)}
+.card.trail{border-top-color:var(--kelp)}.card.eat{border-top-color:var(--rust)}.card.cult{border-top-color:var(--slate)}
+.card .ct{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.card h3{font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.01em;color:var(--land);line-height:1.15}
+.card .meta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--slate);font-variant-numeric:tabular-nums;letter-spacing:.02em;white-space:nowrap}
+.card .star{color:var(--rust)}
+.card .role{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin:9px 0 6px;color:#9A958A}
+.card.trail .role{color:var(--kelp)}.card.eat .role{color:var(--rust)}.card.cult .role{color:var(--slate)}
+.card p{font-size:15px;color:var(--body);line-height:1.6;margin-top:4px;max-width:44em}
+.card .sub{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9A958A;margin-top:10px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.card .go-link{display:inline-block;margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--slate);border-bottom:1px solid var(--hairline)}
+.card .go-link:hover{border-bottom-color:var(--slate);color:var(--land)}
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;padding:3px 7px;margin:8px 6px 0 0;border:1px solid transparent}
+.card.trail .tag{color:var(--kelp);background:var(--kelp-wash)}.card.cult .tag{color:var(--slate);background:var(--slate-wash)}
+.tag.slate{color:var(--slate)!important;background:var(--slate-wash)!important}.tag.watch{color:var(--rust)!important;background:var(--rust-wash)!important}
+.closeband{background:linear-gradient(158deg,#1D2229,#242A32 70%,#2B3540);color:var(--paper);margin-top:72px;padding:46px 0 40px}
+.closeband .course{max-width:300px;margin-bottom:26px}
+.closeband .love{font-family:'Newsreader',serif;font-style:italic;font-size:20px;color:var(--paper);margin:0 0 22px;line-height:1.5;max-width:31em}
+.closeband .love b{color:var(--sound);font-style:normal;font-weight:500}
+.foot{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.05em;color:var(--slate-l);line-height:2;font-variant-numeric:tabular-nums}
+.foot b{color:var(--sound);font-weight:500}
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="wrap">
+      <a class="backlink" href="index.html">← The Relocation Briefcase</a>
+      <div class="k">Candidate A3 · California · Lanterman Entitlement</div>
+      <div class="wordmark">JEREMY RUNGE</div>
+      <h1 class="disp">Santa Rosa<br>&amp; Sonoma</h1>
+      <div class="course wm-course" role="presentation"></div>
+      <p class="dek">The one you actually want — wine country, an hour and a half from Karston. If the rent and the fire map cooperate.</p>
+      <div class="databar" aria-label="destination data">
+        <span class="df"><span class="dl">POS</span><b>38.44°N 122.71°W</b></span>
+        <span class="df"><span class="dl">3BD/2BA RENT</span><b>~$2,600–3,100</b></span>
+        <span class="df"><span class="dl">WILDFIRE</span><b class="warn">HIGH</b></span>
+        <span class="df"><span class="dl">TO SF</span><b class="go">~1.5 HR</b></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="pitch" aria-label="the pitch">
+      <p>This is the one you named as the dream, and it's real: Sonoma County is affirming to its bones — <b>Guerneville is one of the oldest LGBTQ havens on the West Coast</b> — with a proper co-op, the Russian River, world-class food, big-city hospitals, and Karston <b>about ninety minutes south</b>. On lifestyle, almost nothing beats it.</p>
+      <p>Two honest asterisks keep it from being automatic. First, <b>rent</b>: a 3/2 in Santa Rosa runs roughly <b>$2,600–3,100</b> — apartments and townhomes land under $3K, houses run tight, and Sebastopol or Healdsburg break the budget outright. Second, and bigger: <b>wildfire</b>. Santa Rosa lost whole neighborhoods in the 2017 Tubbs Fire, and Sonoma insurance is genuinely hard to get and hold.</p>
+    </section>
+  </div>
+
+  <div class="pullband">
+    <div class="wrap">
+      <p class="pull">The life here is the best on the list, and the closest to Karston. <b>The question isn't whether you'd love it — it's whether you can insure it.</b></p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="lab slate"><b>Map</b> &nbsp; The lay of the county</div>
+    <section aria-label="area chart-map">
+      <div class="mapwrap">
+        <svg viewBox="0 0 760 540" role="img" aria-label="Hand-drawn chart of Sonoma County: Santa Rosa at center on Highway 101, Sebastopol southwest, the Russian River running west to the coast at Bodega Head, Annadel and Taylor Mountain to the east and south, with key amenities and the 2017 fire zone marked.">
+          <!-- ocean -->
+          <rect x="34" y="34" width="96" height="472" fill="rgba(70,96,111,.10)"/>
+          <text x="64" y="270" font-family="'Newsreader',serif" font-style="italic" font-size="14" fill="var(--slate)" transform="rotate(-90 64 270)">Pacific Ocean</text>
+          <!-- fire-prone hills NE -->
+          <path d="M540,34 H726 V300 C640,250 560,140 540,34 Z" fill="rgba(131,65,18,.07)"/>
+          <text x="632" y="78" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9.5" fill="var(--rust)">▲ FIRE-PRONE HILLS</text>
+          <text x="632" y="92" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#9A958A">Tubbs 2017 · Glass 2020</text>
+          <!-- frame -->
+          <rect x="34" y="34" width="692" height="472" fill="none" stroke="var(--hairline)" stroke-width="1"/>
+          <!-- coastline -->
+          <path d="M130,34 C142,140 118,240 138,340 C126,420 140,470 132,506" fill="none" stroke="var(--slate)" stroke-width="2" opacity=".7"/>
+          <!-- Russian River: Healdsburg N -> Guerneville -> coast -->
+          <path d="M470,120 C440,180 360,210 300,250 C240,270 180,268 138,300" fill="none" stroke="var(--slate-l)" stroke-width="2" opacity=".9"/>
+          <text x="330" y="238" text-anchor="middle" font-family="'Newsreader',serif" font-style="italic" font-size="12.5" fill="var(--slate-l)">Russian River</text>
+          <text x="474" y="112" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#9A958A">Healdsburg ↑</text>
+          <!-- Hwy 101 (N-S) -->
+          <path d="M430,60 C426,160 424,260 424,360 C424,420 424,470 424,500" fill="none" stroke="var(--rust)" stroke-width="1.5" stroke-dasharray="1 5" stroke-linecap="round" opacity=".85"/>
+          <g transform="translate(452,150)"><rect x="-12" y="-9" width="26" height="18" rx="2" fill="var(--paper)" stroke="var(--rust)" stroke-width="1"/><text x="1" y="4" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="var(--rust)">101</text></g>
+          <!-- Hwy 12 to Sebastopol -->
+          <path d="M424,300 C380,320 330,330 300,342" fill="none" stroke="var(--rust)" stroke-width="1.3" stroke-dasharray="1 5" stroke-linecap="round" opacity=".7"/>
+          <!-- TOWNS -->
+          <circle cx="424" cy="300" r="7.5" fill="var(--land)"/><circle cx="424" cy="300" r="13" fill="none" stroke="var(--land)" stroke-width="1" opacity=".4"/>
+          <text x="442" y="296" text-anchor="start" font-family="'Schibsted Grotesk',sans-serif" font-weight="700" font-size="16" fill="var(--land)">SANTA ROSA</text>
+          <circle cx="298" cy="345" r="6" fill="var(--land)"/>
+          <text x="286" y="366" text-anchor="middle" font-family="'Schibsted Grotesk',sans-serif" font-weight="700" font-size="13" fill="var(--land)">SEBASTOPOL</text>
+          <circle cx="235" cy="255" r="5" fill="var(--land)"/>
+          <text x="224" y="250" text-anchor="middle" font-family="'Schibsted Grotesk',sans-serif" font-weight="700" font-size="11.5" fill="var(--land)">GUERNEVILLE</text>
+          <text x="224" y="262" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7.5" fill="#9A958A">LGBTQ · river</text>
+          <!-- amenities cluster around Santa Rosa -->
+          <g font-family="'IBM Plex Mono',monospace" font-size="9.5" letter-spacing=".02em">
+            <path d="M419,293 l7,7 l-7,7 l-7,-7 z" fill="var(--kelp)"/><circle cx="419" cy="300" r="13" fill="none" stroke="var(--kelp)" stroke-width="1" opacity=".5"/>
+            <text x="424" y="336" text-anchor="middle" fill="var(--kelp)">REGIONAL CENTER ◆</text>
+            <path d="M470,270 l5,8 l-10,0 z" fill="var(--kelp)"/>
+            <text x="482" y="274" text-anchor="start" fill="var(--land)">COMMUNITY MARKET</text>
+            <path d="M462,240 l0,12 M456,246 l12,0" stroke="var(--slate)" stroke-width="2.2"/>
+            <text x="474" y="238" text-anchor="start" fill="var(--slate)">HOSPITALS</text>
+            <circle cx="470" cy="316" r="4.5" fill="var(--rust)"/>
+            <text x="482" y="320" text-anchor="start" fill="var(--rust)">SAIYAN STRENGTH</text>
+            <path d="M392,262 l5,8 l-10,0 z" fill="var(--slate)"/>
+            <text x="380" y="258" text-anchor="end" fill="var(--slate)">SCHULZ · BURBANK</text>
+            <path d="M540,320 l5,8 l-10,0 z" fill="var(--kelp)"/>
+            <text x="552" y="324" text-anchor="start" fill="var(--kelp)">ANNADEL / SPRING LK</text>
+            <path d="M436,392 l5,8 l-10,0 z" fill="var(--kelp)"/>
+            <text x="448" y="396" text-anchor="start" fill="var(--kelp)">TAYLOR MTN</text>
+            <path d="M150,392 l5,8 l-10,0 z" fill="var(--kelp)"/>
+            <text x="162" y="396" text-anchor="start" fill="var(--kelp)">BODEGA HEAD</text>
+          </g>
+          <!-- compass + course to SF (south) -->
+          <g transform="translate(660,452)">
+            <circle r="30" fill="var(--paper)" stroke="var(--hairline)" stroke-width="1"/>
+            <path d="M0,-30 L4,0 L0,30 L-4,0 Z" fill="var(--land)" opacity=".5"/><path d="M0,-30 L4,0 L-4,0 Z" fill="var(--land)"/>
+            <text x="0" y="-34" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="var(--land)">N</text>
+            <line x1="0" y1="30" x2="0" y2="70" stroke="var(--red)" stroke-width="2" stroke-dasharray="8 5"/>
+            <text x="0" y="86" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="var(--red)">SF ~1.5 HR ↓</text>
+          </g>
+        </svg>
+      </div>
+      <p class="mapcap"><b>Chart:</b> relative geography, real bearings. Santa Rosa sits on Highway 101 with its co-op, hospitals, and gym in reach; Sebastopol and Guerneville to the west along the Russian River; Annadel, Spring Lake, and Taylor Mountain for trails. The fire-prone hills — where Tubbs (2017) and Glass (2020) burned — sit to the north and east. SF is ~90 minutes south.</p>
+    </section>
+
+    <div class="lab kelp"><b>A3</b> &nbsp; The scorecard — the fifteen, graded</div>
+    <section aria-label="scorecard">
+      <div class="decisive">
+        <div class="dh">◆ The decisive line</div>
+        <p><b>North Bay Regional Center (Santa Rosa) serves Sonoma County</b> — so the move keeps Maddy inside California's Lanterman system. Her eligibility <b>transfers</b> (Golden Gate RC → North Bay RC), not restarts; the entitlement is guaranteed statewide. <span class="w">Confirm her active-client status before any move — lock that first.</span></p>
+      </div>
+      <div class="score">
+        <div class="srow"><div class="sk">Regional Center<small>01</small></div><div class="sv">North Bay RC (Santa Rosa) covers the county; eligibility transfers within CA — no fresh determination.</div><div class="flagcell"><span class="flag key">DECISIVE ✓</span></div></div>
+        <div class="srow"><div class="sk">Healthcare<small>02</small></div><div class="sv">Strong and deep — Providence Santa Rosa Memorial, Kaiser Santa Rosa, Sutter Santa Rosa. Best of the CA field.</div><div class="flagcell"><span class="flag go">GREEN ★</span></div></div>
+        <div class="srow"><div class="sk">Housing — rent<small>03</small></div><div class="sv">Santa Rosa 3bd/2ba <span class="data">~$2,600–3,100</span> — apartments/townhomes under $3K, houses tight. Sebastopol/Healdsburg over budget.</div><div class="flagcell"><span class="flag watch">MODERATE</span></div></div>
+        <div class="srow"><div class="sk">LGBTQ+<small>04</small></div><div class="sv">Deeply affirming county; Guerneville is an iconic West Coast haven; Santa Rosa Pride. As real as it gets.</div><div class="flagcell"><span class="flag go">GREEN ★</span></div></div>
+        <div class="srow"><div class="sk">Clean eating<small>05</small></div><div class="sv"><b>Community Market Natural Foods</b> (co-op) + Oliver's Market — organic, local, wild-caught covered.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Strength<small>06</small></div><div class="sv"><b>Saiyan Strength</b> (24-hr, powerlifting/Oly, "best equipment money can buy") + Santa Rosa Strength.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Fly fishing<small>07</small></div><div class="sv">Russian River (steelhead &amp; salmon runs) and Lake Sonoma. Good water — not Humboldt-elite, but real.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Dog &amp; trails<small>08</small></div><div class="sv">Spring Lake and Taylor Mountain are dog-friendly; Annadel and the coast are leave-Cooper-home (list below).</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Climate<small>09</small></div><div class="sv">Warm summers, mid-80s with heat spells into the 90s; marine cooling at night, milder toward the coast. Warmer than you'd like.</div><div class="flagcell"><span class="flag watch">▸ WATCH</span></div></div>
+        <div class="srow"><div class="sk">Disaster &amp; insurance<small>10</small></div><div class="sv"><b>The real catch.</b> High wildfire exposure — Tubbs (2017), Kincade (2019), Glass (2020); insurance is hard to place and costly.</div><div class="flagcell"><span class="flag watch">▸ WATCH</span></div></div>
+        <div class="srow"><div class="sk">Connectivity<small>11</small></div><div class="sv">Full broadband/fiber across the metro; remote work is a non-issue.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+        <div class="srow"><div class="sk">Taxes &amp; CoL<small>12</small></div><div class="sv">CA tax; cost of living is the highest of the CA candidates — the wine-country premium is real.</div><div class="flagcell"><span class="flag key">TRADEOFF</span></div></div>
+        <div class="srow"><div class="sk">Support proximity<small>13</small></div><div class="sv"><b>~1.5 hr to Karston in SF</b> — the closest on the list. SMART train + Larkspur ferry; STS airport in town.</div><div class="flagcell"><span class="flag go">GREEN ★</span></div></div>
+        <div class="srow"><div class="sk">Neighborhoods<small>14</small></div><div class="sv">Santa Rosa (Railroad Square, West End, Rincon Valley), Sebastopol (charm, pricey), Windsor, Rohnert Park (value).</div><div class="flagcell"><span class="flag key">WALK IT</span></div></div>
+        <div class="srow"><div class="sk">Vibe &amp; walkability<small>15</small></div><div class="sv">Railroad Square and downtown Santa Rosa walk well; Sebastopol is a genuinely strollable arts town.</div><div class="flagcell"><span class="flag go">GREEN</span></div></div>
+      </div>
+    </section>
+
+    <div class="lab slate"><b>The Bay</b> &nbsp; Getting south, for the record</div>
+    <section aria-label="getting to the bay">
+      <div class="decisive" style="background:linear-gradient(180deg,rgba(70,96,111,.10),rgba(70,96,111,.03));border-color:rgba(70,96,111,.22);border-left-color:var(--slate)">
+        <div class="dh" style="color:var(--slate)">▸ To SF / Berkeley — for reference</div>
+        <p>The good number on this page: SF is <b>~1.5 hours by car</b>, the closest of any candidate. Car-free, the <b>SMART train</b> runs Santa Rosa → Larkspur, then the <b>Larkspur ferry</b> into SF (~2 hours all in); Golden Gate Transit buses also run. Berkeley specifically means SF + BART, so figure ~2.5–3 hours by transit — but the point is Karston is an easy same-day drive, which is the whole reason this town is on the board.</p>
+      </div>
+    </section>
+
+    <div class="lab kelp"><b>Trails</b> &nbsp; Lake, hill &amp; coast</div>
+    <section aria-label="trails">
+      <p class="sec-p">Two dog-friendly everyday walks, plus the two showpieces where Cooper has to sit it out. <span class="w">Live from AllTrails — tap any name.</span></p>
+      <div class="cards">
+        <div class="card trail">
+          <div class="ct"><h3>Spring Lake Loop</h3><span class="meta"><span class="star">★</span> 4.7 · 2.1 mi · Easy</span></div>
+          <p>The everyday walk — a flat, partly-paved loop around a lake on the east edge of Santa Rosa, dog-friendly and stroller-easy. This is Cooper's default.</p>
+          <span class="tag">Dogs on leash</span><span class="tag slate">Lake · Everyday</span>
+          <a class="go-link" href="https://www.alltrails.com/trail/us/california/spring-lake-loop" target="_blank" rel="noopener">Open on AllTrails →</a>
+        </div>
+        <div class="card trail">
+          <div class="ct"><h3>Taylor Mountain via Western Route</h3><span class="meta"><span class="star">★</span> 4.6 · 4.8 mi · Moderate</span></div>
+          <p>The dog-friendly climb — oak grassland up the hill on Santa Rosa's south edge, with big valley views at the top. A real workout Cooper can join.</p>
+          <span class="tag">Dogs on leash</span><span class="tag slate">Views · Regional park</span>
+          <a class="go-link" href="https://www.alltrails.com/trail/us/california/taylor-mountain-via-western-route" target="_blank" rel="noopener">Open on AllTrails →</a>
+        </div>
+        <div class="card trail">
+          <div class="ct"><h3>Annadel — Lake Ilsanjo Loop</h3><span class="meta"><span class="star">★</span> 4.6 · 4.6 mi · Moderate</span></div>
+          <p>The marquee backcountry — Trione-Annadel State Park's rolling oak-and-meadow miles to a hidden lake, right off town. State park, so dogs aren't allowed on the trails.</p>
+          <span class="tag watch">No dogs</span><span class="tag slate">Backcountry · Lake</span>
+          <a class="go-link" href="https://www.alltrails.com/trail/us/california/lake-ilsanjo-via-canyon-and-spring-creek-trail" target="_blank" rel="noopener">Open on AllTrails →</a>
+        </div>
+        <div class="card trail">
+          <div class="ct"><h3>Bodega Head Trail</h3><span class="meta"><span class="star">★</span> 4.8 · 1.7 mi · Easy</span></div>
+          <p>The coast — a headland loop over the Pacific with gray-whale watching in season, about 45 minutes west. State park, dogs not allowed, but a spectacular hour.</p>
+          <span class="tag watch">No dogs</span><span class="tag slate">Coast · Whales</span>
+          <a class="go-link" href="https://www.alltrails.com/trail/us/california/sonoma-coast-state-beach-bodega-head-trail" target="_blank" rel="noopener">Open on AllTrails →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="lab rust"><b>Table</b> &nbsp; Where you'd actually eat</div>
+    <section aria-label="restaurants">
+      <p class="sec-p">Wine-country cooking without the Napa markup — seasonal, local, clean, and genuinely good. <span class="w">Ratings live from Google; tap a name for the map.</span></p>
+      <div class="cards">
+        <div class="card eat">
+          <div class="ct"><h3>The Spinster Sisters</h3><span class="meta"><span class="star">★</span> 4.5 · 985</span></div>
+          <div class="role">The Santa Rosa dinner</div>
+          <p>The anchor of the SoFA arts district — California cooking, a good wine list, and a neighborhood feel. The reliable, all-purpose night out in town.</p>
+          <div class="sub">401 S A St, Santa Rosa · dinner, weekend brunch</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Spinster%20Sisters%20401%20S%20A%20St%20Santa%20Rosa%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card eat">
+          <div class="ct"><h3>The Redwood</h3><span class="meta"><span class="star">★</span> 4.9 · 119</span></div>
+          <div class="role">The special occasion</div>
+          <p>A Sebastopol seasonal-menu room with natural wine and a devoted following — smoked rainbow-trout dip, braised lamb, petrale sole. Elegant but easy. Worth the short drive.</p>
+          <div class="sub">234 S Main St, Sebastopol · dinner</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Redwood%20234%20S%20Main%20St%20Sebastopol%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card eat">
+          <div class="ct"><h3>The Porch Kitchen</h3><span class="meta"><span class="star">★</span> 4.9</span></div>
+          <div class="role">Casual &amp; clean</div>
+          <p>A newer family-run Sebastopol spot with grain bowls, soups, and standout sandwiches, plenty of vegetarian options, and a relaxed patio. The clean-eating everyday lunch.</p>
+          <div class="sub">6811 Laguna Park Way, Sebastopol · lunch/dinner</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Porch%20Kitchen%206811%20Laguna%20Park%20Way%20Sebastopol%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card eat">
+          <div class="ct"><h3>Sonoma Valley Farmhouse</h3><span class="meta"><span class="star">★</span> 4.8 · 719</span></div>
+          <div class="role">Worth the drive</div>
+          <p>Down in Sonoma proper (~30 min), an all-day farmhouse doing strong vegetarian options, hearty plates, and a warm room — the reliable trip-out for brunch or dinner.</p>
+          <div class="sub">18999 Sonoma Hwy, Sonoma · all day</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sonoma%20Valley%20Farmhouse%2018999%20Sonoma%20Hwy%20Sonoma%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="lab slate"><b>Culture</b> &nbsp; Peanuts, gardens &amp; art</div>
+    <section aria-label="culture">
+      <p class="sec-p">A world-famous museum, historic gardens with free grounds, and the county art-and-history collection — all in Santa Rosa.</p>
+      <div class="cards">
+        <div class="card cult">
+          <div class="ct"><h3>Charles M. Schulz Museum</h3><span class="meta"><span class="star">★</span> 4.8 · 1,309</span></div>
+          <div class="role">The icon</div>
+          <p>The Peanuts creator lived and worked in Santa Rosa, and this beautifully done museum tells the whole story — original strips, his recreated studio, a working ice rink next door. A genuine destination.</p>
+          <div class="sub">2301 Hardies Ln, Santa Rosa · Wed–Mon</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Charles%20M%20Schulz%20Museum%20Santa%20Rosa%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card cult">
+          <div class="ct"><h3>Luther Burbank Home &amp; Gardens</h3><span class="meta"><span class="star">★</span> 4.6 · 772</span></div>
+          <div class="role">Historic gardens · free grounds</div>
+          <p>The home and experimental gardens of the horticulturist who bred 800+ plant varieties here — labeled beds, a rose garden, a greenhouse. The grounds are free to wander; tours are cheap.</p>
+          <div class="sub">204 Santa Rosa Ave, Santa Rosa · Tue–Sun</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Luther%20Burbank%20Home%20and%20Gardens%20Santa%20Rosa%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+        <div class="card cult">
+          <div class="ct"><h3>Museum of Sonoma County</h3><span class="meta"><span class="star">★</span> 4.6 · 178</span></div>
+          <div class="role">Art &amp; history</div>
+          <p>Two buildings and a sculpture garden downtown — rotating art exhibits alongside a county-history collection, with free family days monthly. A good rainy-afternoon anchor.</p>
+          <div class="sub">425 7th St, Santa Rosa · Wed–Sun</div>
+          <a class="go-link" href="https://www.google.com/maps/search/?api=1&amp;query=Museum%20of%20Sonoma%20County%20425%207th%20St%20Santa%20Rosa%20CA" target="_blank" rel="noopener">Map →</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="closeband">
+    <div class="wrap">
+      <div class="course" role="presentation"></div>
+      <div class="love">The best life on the list and the shortest drive to Karston — with a fire map and an insurance market that both have to say yes. <b>Love it first; then price the risk.</b><br><br>Love.</div>
+      <div class="foot">
+        <span><b>SYSTEM</b> Due West (locked 2026-07-03) · content register 60/40</span><br>
+        <span><b>SOURCES</b> North Bay RC · Zillow / Zumper / Trulia / RentCafe (3bd/2ba, mid-2026) · AllTrails · Google Places · Cal Fire history</span><br>
+        <span><b>UPDATED</b> 2026-07-16 · <b>STATUS</b> Researched · scout pending</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
